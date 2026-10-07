@@ -169,6 +169,7 @@ button.btn.main{background:var(--brass);color:var(--brass-ink)}
 .reg{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
 .mto{display:grid;gap:8px}.mto button,.mtb{font:500 15px var(--body);text-align:left;padding:12px 14px;min-height:44px;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:6px;cursor:pointer}.mto button:hover,.mtb:hover{border-color:var(--brass)}.mto button.ok{border-color:#2f7d4f;background:rgba(47,125,79,.12)}.mto button.no{border-color:#b3472f;background:rgba(179,71,47,.12)}.mtb{margin-top:12px;text-align:center}
 .lr{margin:0;padding-left:22px;display:grid;gap:6px}.lr a{color:var(--ink);text-underline-offset:3px;display:inline-block;min-height:28px}.leroute{scroll-margin-top:12px}#le-levels,#le-dirs,#le-terms,#le-dict,#mt{scroll-margin-top:16px}
+.uni .wl{margin:2px 0 10px;font-size:14px}.uni .wl a{color:var(--ink);text-underline-offset:3px;display:inline-block;min-height:28px}
 .rc{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px;min-width:0}
 .rc h3{font:700 21px/1.25 var(--display);margin:0 0 4px}
 .rc .deg{font:500 12px var(--mono);color:var(--brass);text-transform:uppercase;letter-spacing:.06em;margin:0 0 12px}
@@ -621,6 +622,8 @@ const O=[
 ["Уральск","Казахстанский университет инновационных и телекоммуникационных систем"]
 ];
 
+var W={"Almaty Management University (AlmaU)": "https://almau.edu.kz/ru/study/spl/","Alikhan Bokeikhan University": "https://abu.edu.kz/ru/home","Атырауский университет имени Х. Досмухамедова": "https://atyrau.edu.kz/ru/","Евразийский национальный университет имени Л. Н. Гумилёва": "https://enu.kz/ru","Казахский национальный университет имени аль-Фараби": "https://farabi.university/postupayushchim?lang=ru","Казахский национальный педагогический университет имени Абая": "https://abai.university/ru","Каспийский университет": "https://cu.edu.kz/","Казахстанско-Американский свободный университет (KAFU)": "https://kafu.edu.kz/ru/admission/","Казахский университет международных отношений и мировых языков имени Абылай хана": "https://www.ablaikhan.kz/ru/for-applicants/for-applicants/our-faculties.html","Университет Кунаева": "https://vuzkunaeva.kz","Костанайский региональный университет имени Ахмет Байтұрсынұлы": "https://ksu.edu.kz/enrollee/bakalavriat/","Yessenov University": "https://yu.edu.kz/ru/priemnaya-komissiya/","Кызылординский университет имени Коркыт Ата": "https://korkyt.edu.kz/ru/staticpages/252","Казахский национальный аграрный исследовательский университет (КазНАИУ)": "https://www.kaznaru.edu.kz","ESIL University (бывший КазУЭФМТ)": "https://esil.edu.kz/entrant/","Западно-Казахстанский университет имени Махамбета Утемисова": "https://wku.edu.kz/ru/","Инновационный Евразийский университет (ИнЕУ)": "https://ineu.edu.kz/ru/","Кызылординский университет «Болашак»": "https://bolashak-edu.kz/index.php?lang=ru","Кокшетауский университет имени Ш. Уалиханова": "https://shokan.edu.kz/ru/","Костанайский социально-технический университет имени академика Зулхарнай Алдамжар": "https://kosstu.edu.kz/","Sherkhan Murtaza University": "https://htu.edu.kz/ru/","Таразский региональный университет имени М. Х. Дулати (Dulaty University)": "https://talapker.dulaty.kz/"};
+
 var V={
 "Карагандинский национальный исследовательский университет имени академика Е. А. Букетова|Бакалавриат":{d:"06.10.2026",f:[["Источник","страницы кафедр на сайте вуза"],["Не указано","срок, язык, стоимость, набор 2026, госзаказ"],["Госзаказ","вуз участвует в распределении госзаказа по группе B049 (НЦТ, 2026–2027); места распределяются по группе, а не по конкретной программе"]]},
 "Карагандинский национальный исследовательский университет имени академика Е. А. Букетова|Магистратура":{d:"06.10.2026",f:[["Источник","страницы кафедр на сайте вуза"],["Не указано","срок, язык, стоимость, набор 2026"],["Госзаказ","отдельно не проверялся"]]},
@@ -656,6 +659,7 @@ var V={
       var card=el('article','uni');
       card.appendChild(el('h3','',it.u));
       card.appendChild(el('p','meta',it.c+' · '+it.l));
+      if(W[it.u]){var wp=el('p','wl');var wa=el('a','','\uD83C\uDF10 Официальный сайт');wa.href=W[it.u];wa.target='_blank';wa.rel='noopener noreferrer';wp.appendChild(wa);card.appendChild(wp)}
       var ul=el('ul');
       rows.forEach(function(r){
         var li=el('li');li.appendChild(r[0]?el('code','',r[0]):el('code','nocode','Код ОП не указан в исходных данных'));
