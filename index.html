@@ -167,6 +167,7 @@ button.btn.main{background:var(--brass);color:var(--brass-ink)}
 .scale-l{display:flex;justify-content:space-between;font:500 11px var(--mono);color:var(--muted);margin-bottom:20px}
 
 .reg{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+.mto{display:grid;gap:8px}.mto button,.mtb{font:500 15px var(--body);text-align:left;padding:12px 14px;min-height:44px;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:6px;cursor:pointer}.mto button:hover,.mtb:hover{border-color:var(--brass)}.mto button.ok{border-color:#2f7d4f;background:rgba(47,125,79,.12)}.mto button.no{border-color:#b3472f;background:rgba(179,71,47,.12)}.mtb{margin-top:12px;text-align:center}
 .rc{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px;min-width:0}
 .rc h3{font:700 21px/1.25 var(--display);margin:0 0 4px}
 .rc .deg{font:500 12px var(--mono);color:var(--brass);text-transform:uppercase;letter-spacing:.06em;margin:0 0 12px}
@@ -408,6 +409,28 @@ details ul.plain,details ol.plain{margin:0 0 8px;color:var(--muted)}
       <div class="rc"><h3>Что входит</h3><ul class="plain"><li>Специальная юридическая лексика</li><li>Устойчивые выражения и клише документов</li><li>Чтение судебных решений и законов</li><li>Навыки юридического письма</li><li>Устная речь (презентации, переговоры, moot court)</li></ul></div>
       <div class="rc"><h3>С чего начать</h3><ul class="plain"><li>При уровне Beginner / Elementary сначала подтяните общий английский</li><li>При уровне Intermediate и выше можно начинать Legal English</li><li>Даже высокий общий IELTS не всегда означает готовность к юридическому английскому. Его нужно изучать отдельно.</li></ul></div>
     </div>
+    <span id="legal-english"></span>
+    <h3 class="sub2">Какой уровень нужен</h3>
+    <p class="sub" style="margin-bottom:12px">Ориентиры по шкале CEFR. Это не жёсткое соответствие баллам IELTS: требования зависят от вуза и программы.</p>
+    <div class="tw" style="margin-bottom:28px"><table><thead><tr><th>Цель</th><th>Ориентир</th></tr></thead><tbody><tr><td>Читать простые юридические тексты</td><td>B1</td></tr><tr><td>Договоры и корпоративные документы</td><td>B2</td></tr><tr><td>Учёба на LL.M.</td><td>B2–C1</td></tr><tr><td>International / Commercial Law</td><td>C1</td></tr><tr><td>Международные фирмы и арбитраж</td><td>C1–C2</td></tr></tbody></table></div>
+    <h3 class="sub2">Направления Legal English</h3>
+    <div class="reg" style="margin-bottom:28px">
+      <div class="rc"><h3>Contract Law English</h3><p style="margin:0">Договоры, clauses, obligations, liability, termination, indemnity.</p></div>
+      <div class="rc"><h3>Corporate Law English</h3><p style="margin:0">Companies, shareholders, directors, mergers and acquisitions, corporate governance.</p></div>
+      <div class="rc"><h3>International Law English</h3><p style="margin:0">Treaties, international agreements, jurisdiction, state responsibility.</p></div>
+      <div class="rc"><h3>Arbitration and Dispute Resolution</h3><p style="margin:0">Arbitration, mediation, dispute resolution, awards, proceedings.</p></div>
+      <div class="rc"><h3>Legal Writing</h3><p style="margin:0">Legal emails, memoranda, clauses, профессиональная переписка.</p></div>
+      <div class="rc"><h3>Legal Communication</h3><p style="margin:0">Как говорить с клиентом, коллегой, иностранным юристом или международной организацией.</p></div>
+    </div>
+    <h3 class="sub2">Словарь LAWSTART: как будут устроены статьи</h3>
+    <p class="sub" style="margin-bottom:12px">Термин, простое объяснение на английском, юридический смысл, перевод, пример и проверка. Первые три статьи написаны LAWSTART самостоятельно.</p>
+    <div class="reg" style="margin-bottom:28px">
+      <div class="rc"><h3 lang="en">indemnify</h3><dl><dt>Simple English</dt><dd lang="en">To compensate someone for a loss or damage.</dd><dt>Юридический смысл</dt><dd>Возместить другой стороне определённые убытки, расходы или ответственность.</dd><dt>Перевод</dt><dd>возмещать убытки</dd><dt>Example</dt><dd lang="en"><i>An indemnity clause may require one party to compensate the other for specified losses.</i></dd></dl></div>
+      <div class="rc"><h3 lang="en">breach of contract</h3><dl><dt>Simple English</dt><dd lang="en">Failing to do what a contract says.</dd><dt>Юридический смысл</dt><dd>Неисполнение или ненадлежащее исполнение обязательства по договору.</dd><dt>Перевод</dt><dd>нарушение договора</dd><dt>Example</dt><dd lang="en"><i>Late delivery may amount to a breach of contract.</i></dd></dl></div>
+      <div class="rc"><h3 lang="en">governing law</h3><dl><dt>Simple English</dt><dd lang="en">The law that decides how a contract is interpreted.</dd><dt>Юридический смысл</dt><dd>Право, которому стороны подчинили договор; оговорка о применимом праве.</dd><dt>Перевод</dt><dd>применимое право</dd><dt>Example</dt><dd lang="en"><i>This Agreement shall be governed by the laws of England.</i></dd></dl></div>
+    </div>
+    <div class="rc mt" id="mt" style="margin-bottom:28px"><h3>Мини-тест</h3><p id="mtq" style="margin:0 0 12px"></p><div id="mto" class="mto"></div><p id="mtr" class="note" style="margin:12px 0 0" aria-live="polite"></p><button type="button" id="mtn" class="mtb" hidden>Дальше</button></div>
+    <div class="rc" style="margin-bottom:28px"><h3>AI-репетитор: в планах</h3><div class="bd"><i class="">Пока не запущено</i></div><p style="margin:0">Мы планируем короткие видеоуроки и голосовой режим по Legal English: послушать термин, понять смысл, увидеть пример и пройти проверку. Сейчас такого репетитора на сайте нет, он появится только после того, как материалы будут написаны и проверены. Видео и персонажи будут созданы с помощью ИИ, это будет указано.</p></div>
     <p class="note" style="margin:0 0 16px">Ниже материалы из курса Foundations of Legal English: терминология, язык договоров и юридическая переписка. Разделы про лексику для переговоров и устные выступления пока не добавлены.</p>
     <div class="ctl"><input type="search" id="gq" placeholder="Найти слово или фразу, например indemnify" aria-label="Поиск по юридическому английскому"></div>
     <details open><summary>1. Общая юридическая терминология / General Legal Terminology</summary><div class="terms"><div class="t"><b>party</b><span class="tr">сторона (договора, дела)</span><span class="ex">лицо или организация, участвующая в договоре или судебном деле</span><i lang="en">Both parties agreed to the terms of the contract.</i></div><div class="t"><b>clause</b><span class="tr">пункт, условие (договора)</span><span class="ex">отдельное положение внутри договора или закона</span><i lang="en">The termination clause allows either party to end the agreement early.</i></div><div class="t"><b>liability</b><span class="tr">ответственность (в т.ч. материальная)</span><span class="ex">юридическая обязанность возместить ущерб или отвечать за что-либо</span><i lang="en">The company denied any liability for the damage.</i></div><div class="t"><b>jurisdiction</b><span class="tr">юрисдикция</span><span class="ex">территория или сфера, на которую распространяется правовая власть суда или органа</span><i lang="en">The court has no jurisdiction over this matter.</i></div><div class="t"><b>plaintiff</b><span class="tr">истец</span><span class="ex">лицо, подающее иск в суд</span><i lang="en">The plaintiff claims damages of $10,000.</i></div><div class="t"><b>defendant</b><span class="tr">ответчик</span><span class="ex">лицо, против которого подан иск</span><i lang="en">The defendant pleaded not guilty.</i></div><div class="t"><b>statute</b><span class="tr">закон, статут</span><span class="ex">письменный закон, принятый законодательным органом</span><i lang="en">This statute regulates data protection.</i></div><div class="t"><b>breach</b><span class="tr">нарушение (договора, обязательства)</span><span class="ex">несоблюдение условий договора или закона</span><i lang="en">The supplier was in breach of contract.</i></div><div class="t"><b>damages</b><span class="tr">компенсация, возмещение ущерба</span><span class="ex">денежная сумма, выплачиваемая пострадавшей стороне</span><i lang="en">The court awarded damages of $50,000.</i></div><div class="t"><b>litigation</b><span class="tr">судебный процесс, тяжба</span><span class="ex">процесс разрешения спора через суд</span><i lang="en">The dispute resulted in years of litigation.</i></div><div class="t"><b>counsel</b><span class="tr">адвокат, юрисконсульт; юридическая консультация</span><span class="ex">обозначает и юриста, и сам процесс дачи совета</span><i lang="en">She retained counsel to represent her in court.</i></div><div class="t"><b>testimony</b><span class="tr">свидетельские показания</span><span class="ex">устное заявление свидетеля в суде</span><i lang="en">His testimony was crucial to the case.</i></div><div class="t"><b>evidence</b><span class="tr">доказательство</span><span class="ex">факты или материалы, подтверждающие позицию стороны</span><i lang="en">There was not enough evidence to convict him.</i></div><div class="t"><b>verdict</b><span class="tr">вердикт, решение суда (присяжных)</span><span class="ex">итоговое решение по делу</span><i lang="en">The jury reached a unanimous verdict.</i></div><div class="t"><b>appeal</b><span class="tr">апелляция, обжалование</span><span class="ex">обращение в вышестоящий суд для пересмотра решения</span><i lang="en">The defendant filed an appeal against the ruling.</i></div><div class="t"><b>legalese</b><span class="tr">«юридический жаргон»</span><span class="ex">сложный, тяжёлый для понимания юридический язык</span><i lang="en">The contract was full of confusing legalese.</i></div><div class="t"><b>draft</b><span class="tr">проект (документа); составлять проект</span><span class="ex">предварительная версия договора или документа</span><i lang="en">Please review the draft agreement before signing.</i></div><div class="t"><b>enforce</b><span class="tr">обеспечивать исполнение, приводить в исполнение</span><span class="ex">заставлять соблюдать закон или условия договора</span><i lang="en">The court can enforce the terms of the settlement.</i></div><div class="t"><b>waiver</b><span class="tr">отказ (от права)</span><span class="ex">добровольный отказ стороны от какого-либо права</span><i lang="en">She signed a waiver releasing the company from liability.</i></div><div class="t"><b>binding</b><span class="tr">обязывающий, имеющий юридическую силу</span><span class="ex">документ или соглашение, которое стороны обязаны соблюдать</span><i lang="en">This agreement is legally binding on both parties.</i></div></div></details>
@@ -768,7 +791,31 @@ var V={
   });
 })();
 </script>
-<script>try{if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.querySelectorAll('figure svg').forEach(function(v){v.pauseAnimations()})}catch(e){}</script>
+<script>try{if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.querySelectorAll('figure svg').forEach(function(v){v.pauseAnimations()})}catch(e){}
+(function(){
+  var T=[
+    ['What does “indemnify” mean?',['To terminate a contract','To compensate for a loss','To transfer ownership','To settle a dispute'],1,'Indemnify: возместить убытки или расходы другой стороны.'],
+    ['Which phrase means «применимое право»?',['breach of contract','force majeure','governing law','consideration'],2,'Governing law — право, которому стороны подчинили договор.'],
+    ['Late delivery that violates the contract is a…',['breach of contract','governing law','indemnity','jurisdiction'],0,'Breach of contract — нарушение договора.']
+  ],i=0,score=0,q=document.getElementById('mtq'),o=document.getElementById('mto'),r=document.getElementById('mtr'),n=document.getElementById('mtn');
+  if(!q||!o||!r||!n)return;
+  function show(){
+    var t=T[i];q.textContent=(i+1)+'/'+T.length+'. '+t[0];q.setAttribute('lang','en');o.innerHTML='';r.textContent='';n.hidden=true;
+    t[1].forEach(function(x,k){var b=document.createElement('button');b.type='button';b.textContent=x;b.setAttribute('lang','en');
+      b.onclick=function(){
+        var bs=o.children;for(var j=0;j<bs.length;j++){bs[j].disabled=true}
+        if(k===t[2]){b.className='ok';score++;r.textContent='Верно. '+t[3]}else{b.className='no';bs[t[2]].className='ok';r.textContent='Не совсем. '+t[3]}
+        n.textContent=i<T.length-1?'Дальше':'Результат';n.hidden=false};
+      o.appendChild(b)})
+  }
+  n.onclick=function(){
+    if(i<T.length-1){i++;show()}
+    else if(n.textContent==='Результат'){q.removeAttribute('lang');q.textContent='Результат: '+score+' из '+T.length+'. Это короткая проверка трёх терминов, а не оценка уровня английского.';o.innerHTML='';r.textContent='';n.textContent='Пройти заново';n.hidden=false}
+    else{i=0;score=0;show()}
+  };
+  show();
+})();
+</script>
 
 </body>
 </html>
