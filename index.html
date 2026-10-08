@@ -47,7 +47,7 @@ header.top{flex-wrap:wrap;display:flex;justify-content:space-between;align-items
 .logo i{font-style:normal;color:var(--brass)}
 .tag{font:500 12px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
 
-.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;padding-block:48px 40px;align-items:start}
+.hero>div:first-child{grid-column:1/-1}.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;padding-block:48px 40px;align-items:start}
 h1{font:700 clamp(34px,6vw,56px)/1.06 var(--display);letter-spacing:-.02em;margin:0 0 18px;text-wrap:balance}
 .lead{color:var(--muted);font-size:18px;max-width:46ch;margin:0 0 28px}
 .cta{display:flex;flex-wrap:wrap;gap:12px}
@@ -56,9 +56,9 @@ h1{font:700 clamp(34px,6vw,56px)/1.06 var(--display);letter-spacing:-.02em;margi
 .btn:hover{transform:translateY(-1px)}
 @media (prefers-reduced-motion:no-preference){.btn{transition:transform .15s}}
 
-.route{padding:0}
-.route h2{font:700 28px/1.2 var(--display);color:var(--ink);margin:0 0 4px}.route .rs{margin:0 0 12px;color:var(--muted);font-size:15px}
-.route a{display:flex;justify-content:space-between;gap:12px;padding:14px 16px;min-height:56px;margin-top:10px;background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none;font-weight:500}.route a:hover{border-color:var(--ink)}.route a.go{border:2px solid var(--brass);padding:13px 15px}
+.route{padding:0;grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}.route h2,.route .rs{grid-column:1/-1}
+.route h2{font:700 28px/1.2 var(--display);color:var(--ink);margin:0}.route .rs{margin:0 0 4px;color:var(--muted);font-size:15px}
+.route a{display:flex;justify-content:space-between;gap:12px;padding:14px 16px;min-height:56px;margin-top:0;background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none;font-weight:500}.route a:hover{border-color:var(--ink)}.route a.go{border:2px solid var(--brass);padding:13px 15px}
 .route a:first-of-type{margin-top:0}
 .route a span:last-child{color:#1F7A47;font:700 22px/1 var(--body);flex:none;align-self:center}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .route a span:last-child{color:#7FD6A3}}
@@ -232,18 +232,18 @@ details ul.plain,details ol.plain{margin:0 0 8px;color:var(--muted)}
     </div>
     <nav class="route" aria-label="Куда вы идёте">
       <h2>Куда вы идёте</h2>
-      <p class="rs">Выберите свой маршрут — LAWSTART сразу покажет нужный раздел.</p>
+      <p class="rs">Выберите свой маршрут — LAWSTART покажет нужный раздел.</p>
       <a href="#catalog"><span><b>После школы → бакалавриат</b><small>Юридическое образование в Казахстане и за рубежом</small></span><span>→</span></a>
-      <a href="#second"><span><b>Уже есть диплом → второе высшее</b><small>Если хотите получить юридическую профессию после другого образования</small></span><span>→</span></a>
-      <a href="#catalog"><span><b>Уже есть бакалавриат → магистратура</b><small>Магистратура M078, LL.M. и другие юридические направления</small></span><span>→</span></a>
-      <a href="#abroad"><span><b>Хочу учиться за рубежом</b><small>США и Канада, Великобритания, Европа, Азия, Австралия и Новая Зеландия</small></span><span>→</span></a>
-      <a href="#fields"><span><b>Не знаю, какое направление права выбрать</b><small>Корпоративное, международное, коммерческое, уголовное, IT и другие направления</small></span><span>→</span></a>
-      <a href="#legal-english"><span><b>Хочу улучшить юридический английский</b><small>Legal English: B1 → B2 → C1 → международное право и практика</small></span><span>→</span></a>
+      <a href="#second"><span><b>Уже есть диплом → второе высшее</b><small>Получить юридическое образование после другого высшего образования</small></span><span>→</span></a>
+      <a href="#catalog"><span><b>Уже есть бакалавриат → магистратура</b><small>M078 · профильная и научно-педагогическая магистратура · LL.M.</small></span><span>→</span></a>
+      <a href="#abroad"><span><b>Хочу учиться за рубежом</b><small>США · Канада · Великобритания · Европа · Азия · Австралия · Новая Зеландия</small></span><span>→</span></a>
+      <a href="#fields"><span><b>Хочу выбрать направление права</b><small>Корпоративное · международное · коммерческое · IT · уголовное и другие направления</small></span><span>→</span></a>
+      <a href="#legal-english"><span><b>Хочу улучшить Legal English</b><small>B1 → B2 → C1 → международное и коммерческое право</small></span><span>→</span></a>
       <a href="#admission"><span><b>Готовлюсь к поступлению</b><small>LSAT · IELTS / TOEFL · EducationUSA · Legal English</small></span><span>→</span></a>
       <a href="#career-experience"><span><b>Хочу попробовать профессию</b><small>МФЦА · виртуальный профессиональный опыт · карьерные симуляции</small></span><span>→</span></a>
-      <a href="#funding"><span><b>Ищу стипендию и финансирование</b><small>Стипендии, гранты и возможности финансирования обучения</small></span><span>→</span></a>
-      <a href="#test" class="go"><span><b>Не знаю, с чего начать → LAWSTART INDEX</b><small>8 вопросов · около 2 минут · получите персональный маршрут</small></span><span>→</span></a>
-      <a href="#checklist"><span><b>Хочу проверить, что нужно для поступления</b><small>Документы · сроки · требования · важные шаги</small></span><span>→</span></a>
+      <a href="#funding"><span><b>Ищу стипендию и финансирование</b><small>Стипендии · гранты · финансирование обучения</small></span><span>→</span></a>
+      <a href="#test" class="go"><span><b>Не знаю, с чего начать → LAWSTART INDEX</b><small>8 вопросов · около 2 минут · персональный образовательный маршрут</small></span><span>→</span></a>
+      <a href="#checklist"><span><b>Хочу проверить, что нужно для поступления</b><small>Документы · сроки · требования · основные шаги</small></span><span>→</span></a>
       <a href="#faq"><span><b>Есть вопрос</b><small>Ответы на частые вопросы о юридическом образовании</small></span><span>→</span></a>
     </nav>
   </div>
