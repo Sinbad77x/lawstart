@@ -170,6 +170,7 @@ button.btn.main{background:var(--brass);color:var(--brass-ink)}
 .mto{display:grid;gap:8px}.mto button,.mtb{font:500 15px var(--body);text-align:left;padding:12px 14px;min-height:44px;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:6px;cursor:pointer}.mto button:hover,.mtb:hover{border-color:var(--brass)}.mto button.ok{border-color:#2f7d4f;background:rgba(47,125,79,.12)}.mto button.no{border-color:#b3472f;background:rgba(179,71,47,.12)}.mtb{margin-top:12px;text-align:center}
 .lr{margin:0;padding-left:22px;display:grid;gap:6px}.lr a{color:var(--ink);text-underline-offset:3px;display:inline-block;min-height:28px}.leroute{scroll-margin-top:12px}#le-levels,#le-dirs,#le-terms,#le-dict,#mt{scroll-margin-top:16px}
 .uni .wl{margin:2px 0 10px;font-size:14px}.uni .wl a{color:var(--ink);text-underline-offset:3px;display:inline-block;min-height:28px}
+.uni .lv{margin:14px 0 2px;font-weight:600}
 .rc{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px;min-width:0}
 .rc h3{font:700 21px/1.25 var(--display);margin:0 0 4px}
 .rc .deg{font:500 12px var(--mono);color:var(--brass);text-transform:uppercase;letter-spacing:.06em;margin:0 0 12px}
@@ -295,8 +296,8 @@ details ul.plain,details ol.plain{margin:0 0 8px;color:var(--muted)}
     <div class="ugrid" id="list"></div>
         <div class="other" id="other" style="margin-top:28px">
       <h3>Дополнительная проверка данных</h3>
-      <p class="note" style="margin:0 0 10px"><b>Эти вузы не входят в показатели «54 вуза / 182 программы»</b>, пока сведения не подтверждены.</p>
-      <p class="sub">Этот список показывает вузы и программы, по которым ещё требуется отдельная проверка. Он не увеличивает статистику 54 вузов / 182 программ. Часть вузов из списка уже есть в каталоге выше, другие пока не включены, потому что их программы ещё не подтверждены. По всем отдельные сведения — например, код ОП, набор 2026 года, форма обучения или условия поступления — ещё требуют сверки с официальным источником.</p>
+      <p class="note" style="margin:0 0 10px"><b>Эти вузы не входят в показатели «52 вуза / 182 программы»</b>, пока сведения не подтверждены.</p>
+      <p class="sub">Этот список показывает вузы и программы, по которым ещё требуется отдельная проверка. Он не увеличивает статистику 52 вузов / 182 программ. Часть вузов из списка уже есть в каталоге выше, другие пока не включены, потому что их программы ещё не подтверждены. По всем отдельные сведения — например, код ОП, набор 2026 года, форма обучения или условия поступления — ещё требуют сверки с официальным источником.</p>
       <dl id="olist"></dl>
     </div>
   </section>
@@ -559,7 +560,7 @@ const B=[
 ["Toraighyrov University","Павлодар",[["6B04201","Юриспруденция"]]],
 ["Q University","Алматы",[["6B04201","Юриспруденция: правоохранительная деятельность"],["6B04202","Юриспруденция: предпринимательское право"],["6B04207","Юриспруденция: государственное управление"]]],
 ["Maqsut Narikbayev University (MNU, бывший КазГЮУ)","Астана",[["","Юриспруденция"],["","Международное право"]]],
-["SDU University","Алматы",[["6B04201","Прикладное право (Право)"],["6B04202","Международное право"],["6B04203","Право государственного управления"]]],
+["SDU University","Каскелен",[["6B04201","Прикладное право (Право)"],["6B04202","Международное право"],["6B04203","Право государственного управления"]]],
 ["Университет «Туран»","Алматы",[["6B04201","Юриспруденция"],["6B04202","Международное право"],["6B04203","Правовое сопровождение бизнеса (корпоративный юрист)"]]],
 ["Университет «Мирас»","Шымкент",[["6B04202","Юриспруденция"]]],
 ["Южно-Казахстанский исследовательский университет имени М. Ауэзова","Шымкент",[["6B04210","Юриспруденция"],["6B04214","Право и правоохранительная деятельность"],["6B04220","Международное право"]]],
@@ -622,7 +623,9 @@ const O=[
 ["Уральск","Казахстанский университет инновационных и телекоммуникационных систем"]
 ];
 
-var W={"Almaty Management University (AlmaU)": "https://almau.edu.kz/ru/study/spl/","Alikhan Bokeikhan University": "https://abu.edu.kz/ru/home","Атырауский университет имени Х. Досмухамедова": "https://atyrau.edu.kz/ru/","Евразийский национальный университет имени Л. Н. Гумилёва": "https://enu.kz/ru","Казахский национальный университет имени аль-Фараби": "https://farabi.university/postupayushchim?lang=ru","Казахский национальный педагогический университет имени Абая": "https://abai.university/ru","Каспийский университет": "https://cu.edu.kz/","Казахстанско-Американский свободный университет (KAFU)": "https://kafu.edu.kz/ru/admission/","Казахский университет международных отношений и мировых языков имени Абылай хана": "https://www.ablaikhan.kz/ru/for-applicants/for-applicants/our-faculties.html","Университет Кунаева": "https://vuzkunaeva.kz", "Евразийская юридическая академия имени Д. Кунаева": "https://vuzkunaeva.kz","Костанайский региональный университет имени Ахмет Байтұрсынұлы": "https://ksu.edu.kz/enrollee/bakalavriat/","Yessenov University": "https://yu.edu.kz/ru/priemnaya-komissiya/","Кызылординский университет имени Коркыт Ата": "https://korkyt.edu.kz/ru/staticpages/252","Казахский национальный аграрный исследовательский университет (КазНАИУ)": "https://www.kaznaru.edu.kz","ESIL University (бывший КазУЭФМТ)": "https://esil.edu.kz/entrant/","Западно-Казахстанский университет имени Махамбета Утемисова": "https://wku.edu.kz/ru/","Инновационный Евразийский университет (ИнЕУ)": "https://ineu.edu.kz/ru/","Кызылординский университет «Болашак»": "https://bolashak-edu.kz/index.php?lang=ru","Кокшетауский университет имени Ш. Уалиханова": "https://shokan.edu.kz/ru/","Костанайский социально-технический университет имени академика Зулхарнай Алдамжар": "https://kosstu.edu.kz/","Sherkhan Murtaza University": "https://htu.edu.kz/ru/","Таразский региональный университет имени М. Х. Дулати (Dulaty University)": "https://talapker.dulaty.kz/"};
+var W={"Almaty Management University (AlmaU)": "https://almau.edu.kz/ru/study/spl/", "Alikhan Bokeikhan University": "https://abu.edu.kz/ru/home", "Атырауский университет имени Х. Досмухамедова": "https://atyrau.edu.kz/ru/", "Евразийский национальный университет имени Л. Н. Гумилёва": "https://enu.kz/ru", "Казахский национальный университет имени аль-Фараби": "https://farabi.university/postupayushchim?lang=ru", "Казахский национальный педагогический университет имени Абая": "https://abai.university/ru", "Каспийский университет": "https://cu.edu.kz/", "Казахстанско-Американский свободный университет (KAFU)": "https://kafu.edu.kz/ru/admission/", "Казахский университет международных отношений и мировых языков имени Абылай хана": "https://www.ablaikhan.kz/ru/for-applicants/for-applicants/our-faculties.html", "Университет Кунаева": "https://vuzkunaeva.kz", "Костанайский региональный университет имени Ахмет Байтұрсынұлы": "https://ksu.edu.kz/ru/", "Yessenov University": "https://yu.edu.kz/ru/priemnaya-komissiya/", "Кызылординский университет имени Коркыт Ата": "https://korkyt.edu.kz/ru/staticpages/252", "Казахский национальный аграрный исследовательский университет (КазНАИУ)": "https://www.kaznaru.edu.kz", "ESIL University (бывший КазУЭФМТ)": "https://esil.edu.kz/entrant/", "Западно-Казахстанский университет имени Махамбета Утемисова": "https://wku.edu.kz/ru/", "Инновационный Евразийский университет (ИнЕУ)": "https://ineu.edu.kz/ru/", "Кызылординский университет «Болашак»": "https://bolashak-edu.kz/index.php?lang=ru", "Кокшетауский университет имени Ш. Уалиханова": "https://shokan.edu.kz/ru/", "Костанайский социально-технический университет имени академика Зулхарнай Алдамжар": "https://kosstu.edu.kz/", "Sherkhan Murtaza University": "https://htu.edu.kz/ru/", "Таразский региональный университет имени М. Х. Дулати (Dulaty University)": "https://talapker.dulaty.kz/", "Северо-Казахстанский университет имени М. Козыбаева": "https://apply.ku.edu.kz/ru", "Университет Нархоз (Narxoz University)": "https://narxoz.edu.kz/", "Toraighyrov University": "https://tou.edu.kz/ru/", "Q University": "https://q-university.edu.kz/ru/admissions", "Maqsut Narikbayev University (MNU, бывший КазГЮУ)": "https://admission.mnu.kz/ru", "SDU University": "https://sdu.edu.kz/ru/", "Университет «Туран»": "https://turan.edu.kz/ru", "Южно-Казахстанский исследовательский университет имени М. Ауэзова": "https://priem.auezov.edu.kz/ru/", "Zhubanov University": "https://zhubanov.edu.kz/ru/enrollee/category/1/", "Жетысуский университет имени Ильяса Жансугурова": "https://zhetysu.edu.kz/%D0%BF%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B0%D1%8E%D1%89%D0%B8%D0%BC/", "Astana International University (AIU)": "https://aiu.kz/?lang=ru", "Astana IT University": "https://astanait.edu.kz/ru", "META University": "https://meta.edu.kz/ru/admissions", "Международный казахско-турецкий университет имени Х. А. Ясави (AYU)": "https://ayu.edu.kz/ru/", "Карагандинский национальный исследовательский университет имени академика Е. А. Букетова": "https://buketov.edu.kz/ru/", "Карагандинский университет Казпотребсоюза": "https://www.keu.kz/ru/abiturient.html", "Центрально-Азиатский инновационный университет (CAIU)": "https://caiu.edu.kz/adminssions-ru/", "Шымкентский университет": "https://univershu.edu.kz/ru/", "Евразийский гуманитарный институт имени А. К. Кусаинова (ЕАГИ)": "https://egi.edu.kz/ru_ru/abit/", "Университет «Туран-Астана»": "https://tau-edu.kz/content/postuplenie-2026-2027", "Казахстанский университет инновационных и телекоммуникационных систем (КазИИТУ)": "https://kazuits.edu.kz/ru/obuchenie/obrazovatelnye-programmy", "Западно-Казахстанский инновационно-технологический университет (West University)": "https://wkitu.kz/ru/", "KIMEP University": "https://www.kimep.kz/ru/", "Академия «Bolashaq»": "https://bolashaq.edu.kz/abiturient2/specialnosti-akademii/", "Баишев Университет": "https://bu.edu.kz/", "Региональный университет инноваций (Regional Innovation University)": "https://riu.edu.kz/", "Академия правосудия при Высшем Судебном Совете РК": "https://sta.edu.kz/pravila-priema/", "Университет «Мирас»": "https://miras.edu.kz/", "Восточно-Казахстанский университет имени Сарсена Аманжолова": "https://vku.edu.kz/?lang=ru", "Алматинский гуманитарно-экономический университет (АГЭУ)": "https://ageu.edu.kz/?lang=ru"};
+// admissions_url (история данных, не отображается)
+var A={"Костанайский региональный университет имени Ахмет Байтұрсынұлы":"https://ksu.edu.kz/enrollee/bakalavriat/"};
 
 var V={
 "Карагандинский национальный исследовательский университет имени академика Е. А. Букетова|Бакалавриат":{d:"06.10.2026",f:[["Источник","страницы кафедр на сайте вуза"],["Не указано","срок, язык, стоимость, набор 2026, госзаказ"],["Госзаказ","вуз участвует в распределении госзаказа по группе B049 (НЦТ, 2026–2027); места распределяются по группе, а не по конкретной программе"]]},
@@ -633,8 +636,15 @@ var V={
 };
 (function(){
   var items=[];
-  B.forEach(function(u){items.push({u:u[0],c:u[1],l:'Бакалавриат',r:u[2].map(function(x){return [x[0],x[1],x[2]||'']})})});
-  M.forEach(function(u){items.push({u:u[0],c:u[1],l:'Магистратура',r:u[2]})});
+  var AL={"Евразийская юридическая академия имени Д. Кунаева":"Университет Кунаева","Костанайский региональный университет имени А. Байтурсынова":"Костанайский региональный университет имени Ахмет Байтұрсынұлы"};
+  B.forEach(function(u){items.push({u:u[0],c:u[1],l:'Бакалавриат',r:u[2].map(function(x){return [x[0],x[1],x[2]||'','Бакалавриат']})})});
+  M.forEach(function(u){
+    var t=AL[u[0]],host=null;
+    if(t){items.forEach(function(i){if(i.u===t&&i.l==='Бакалавриат')host=i})}
+    var rs=u[2].map(function(x){return [x[0],x[1],x[2]||'','Магистратура']});
+    if(host){host.ls=['Бакалавриат','Магистратура'];host.l='Бакалавриат и магистратура';host.r=host.r.concat(rs)}
+    else{items.push({u:u[0],c:u[1],l:'Магистратура',r:rs})}
+  });
   var cities=[].concat(items.map(function(i){return i.c}),O.map(function(o){return o[0]}));
   cities=cities.filter(function(c,i){return cities.indexOf(c)===i}).sort(function(a,b){return a.localeCompare(b,'ru')});
   var sel=document.getElementById('city');
@@ -648,9 +658,10 @@ var V={
     list.textContent='';
     var shown=0,progs=0,seen={};
     items.forEach(function(it){
-      if(st.l&&it.l!==st.l)return;
+      if(st.l&&(it.ls||[it.l]).indexOf(st.l)<0)return;
       if(st.c&&it.c!==st.c)return;
       var rows=it.r;
+      if(st.l&&it.ls){rows=rows.filter(function(r){return r[3]===st.l})}
       if(q){
         var head=norm(it.u+' '+it.c);
         if(head.indexOf(q)<0){rows=rows.filter(function(r){return norm(r[0]+' '+r[1]+' '+r[2]).indexOf(q)>=0})}
@@ -658,17 +669,22 @@ var V={
       }
       var card=el('article','uni');
       card.appendChild(el('h3','',it.u));
-      card.appendChild(el('p','meta',it.c+' · '+it.l));
+      card.appendChild(el('p','meta',it.c+' · '+((it.ls&&st.l)?st.l:it.l)));
       if(W[it.u]){var wp=el('p','wl');var wa=el('a','','\uD83C\uDF10 Официальный сайт');wa.href=W[it.u];wa.target='_blank';wa.rel='noopener noreferrer';wp.appendChild(wa);card.appendChild(wp)}
-      var ul=el('ul');
-      rows.forEach(function(r){
-        var li=el('li');li.appendChild(r[0]?el('code','',r[0]):el('code','nocode','Код ОП не указан в исходных данных'));
-        var d=el('div','',r[1]);
-        if(r[2]){d.appendChild(el('em','',r[2]))}
-        li.appendChild(d);ul.appendChild(li);progs++;
-      });
-      card.appendChild(ul);
-      var v=V[it.u+'|'+it.l];
+      function addRows(rs){
+        var ul=el('ul');
+        rs.forEach(function(r){
+          var li=el('li');li.appendChild(r[0]?el('code','',r[0]):el('code','nocode','Код ОП не указан в исходных данных'));
+          var d=el('div','',r[1]);
+          if(r[2]){d.appendChild(el('em','',r[2]))}
+          li.appendChild(d);ul.appendChild(li);progs++;
+        });
+        card.appendChild(ul);
+      }
+      if(it.ls&&!st.l){it.ls.forEach(function(L){var rs=rows.filter(function(r){return r[3]===L});if(rs.length){card.appendChild(el('p','meta lv',L));addRows(rs)}})}
+      else{addRows(rows)}
+      (it.ls?(st.l?[st.l]:it.ls):[it.l]).forEach(function(LV){
+      var v=V[it.u+'|'+LV];
       if(v){
         var vb=el('div','ver');
         vb.appendChild(el('span','ok','Программа сверена с сайтом вуза'));
@@ -678,7 +694,7 @@ var V={
         var vs=el('p','vs','Последняя проверка: '+v.d+'. Сведения, не указанные выше, ещё не подтверждены. ');
         if(v.u){var a=el('a','','Официальная страница');a.href=v.u;a.target='_blank';a.rel='noopener noreferrer';
         vs.appendChild(a)}vb.appendChild(vs);card.appendChild(vb);
-      }
+      }});
       list.appendChild(card);shown++;seen[it.u]=1;
     });
     cnt.textContent=shown?('В основном каталоге: вузов — '+Object.keys(seen).length+' · программ — '+progs+'. Считаются отдельные записи программ; смежные отмечены отдельно. Вузы из блока «Дополнительная проверка» в эти цифры не входят. Источник: открытые источники, в первую очередь сайты университетов. Отметка «Программа сверена» значит, что название и код программы сверены с официальной страницей вуза; остальные карточки проверяются. Условия могут меняться, сверяйте с официальным сайтом вуза. Обновление: 6 октября 2026.'):'';
