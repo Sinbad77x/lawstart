@@ -63,7 +63,7 @@ h1{font:700 clamp(34px,6vw,56px)/1.06 var(--display);letter-spacing:-.02em;margi
 .route a span:last-child{color:#1F7A47;font:700 22px/1 var(--body);flex:none;align-self:center}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .route a span:last-child{color:#7FD6A3}}
 :root[data-theme="dark"] .route a span:last-child{color:#7FD6A3}
-.route a:hover span:first-child{text-decoration:underline;text-underline-offset:4px}
+.route a:hover b{text-decoration:underline;text-underline-offset:4px}.route a b{display:block;font-size:18px;font-weight:600;line-height:1.3}.route a small{display:block;font:400 13px/1.4 var(--body);color:var(--muted);margin-top:3px}
 
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border-block:1px solid var(--line)}
 .fact{padding:22px 20px 22px 0;min-width:0}
@@ -232,17 +232,17 @@ details ul.plain,details ol.plain{margin:0 0 8px;color:var(--muted)}
     </div>
     <nav class="route" aria-label="Куда вы идёте">
       <h2>Куда вы идёте</h2>
-      <a href="#catalog"><span>После школы: бакалавриат</span><span>→</span></a>
-      <a href="#second"><span>Уже есть диплом: второе высшее</span><span>→</span></a>
-      <a href="#catalog"><span>Уже есть бакалавриат: магистратура</span><span>→</span></a>
-      <a href="#abroad"><span>Хочу учиться за рубежом</span><span>→</span></a>
-      <a href="#fields"><span>Направления права</span><span>→</span></a>
-      <a href="#english"><span>Юридический английский</span><span>→</span></a>
-      <a href="#admission"><span>Подготовка: LSAT, IELTS, EducationUSA</span><span>→</span></a>
-      <a href="#funding"><span>Стипендии и финансирование</span><span>→</span></a>
-      <a href="#checklist"><span>Чек-лист поступления</span><span>→</span></a>
-      <a href="#test"><span>Пройти тест LAWSTART INDEX</span><span>→</span></a>
-      <a href="#faq"><span>Вопросы и ответы</span><span>→</span></a>
+      <a href="#catalog"><span><b>После школы: бакалавриат</b><small>Каталог вузов и программ Казахстана</small></span><span>→</span></a>
+      <a href="#second"><span><b>Уже есть диплом: второе высшее</b><small>Какие программы доступны и что уточнить в вузе</small></span><span>→</span></a>
+      <a href="#catalog"><span><b>Уже есть бакалавриат: магистратура</b><small>Магистратура в вузах Казахстана</small></span><span>→</span></a>
+      <a href="#abroad"><span><b>Хочу учиться за рубежом</b><small>США, Канада, Великобритания, Европа, Азия, Австралия, Новая Зеландия</small></span><span>→</span></a>
+      <a href="#fields"><span><b>Направления права</b><small>Гражданское, корпоративное, международное, налоговое, IT-право и другие</small></span><span>→</span></a>
+      <a href="#english"><span><b>Юридический английский</b><small>Уровни, термины, словарь, курсы и официальные источники</small></span><span>→</span></a>
+      <a href="#admission"><span><b>Подготовка к поступлению</b><small>LSAT · IELTS / TOEFL · EducationUSA · Профориентация</small></span><span>→</span></a>
+      <a href="#funding"><span><b>Стипендии и финансирование</b><small>Болашак, Fulbright, Chevening, DAAD, MEXT</small></span><span>→</span></a>
+      <a href="#checklist"><span><b>Чек-лист поступления</b><small>Для Казахстана и для зарубежного университета</small></span><span>→</span></a>
+      <a href="#test"><span><b>Пройти тест LAWSTART INDEX</b><small>8 вопросов · около 2 минут · подскажет, с чего начать</small></span><span>→</span></a>
+      <a href="#faq"><span><b>Вопросы и ответы</b><small>Короткие ответы по самым частым темам</small></span><span>→</span></a>
     </nav>
   </div>
 
