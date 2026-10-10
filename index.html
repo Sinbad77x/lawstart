@@ -213,6 +213,88 @@ details h4.cty{margin-top:18px}
 details a{text-decoration-color:var(--brass);text-underline-offset:3px}
 details ul.plain,details ol.plain{margin:0 0 8px;color:var(--muted)}
 [hidden]{display:none!important}
+/* ===== LAWSTART Legal English course: STYLES (scoped to .lec) ===== */
+.lec{--lec-ok:#1F7A47;--lec-no:#A33A32;margin:0 0 28px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lec{--lec-ok:#7FD6A3;--lec-no:#F0A39B}}
+:root[data-theme="dark"] .lec{--lec-ok:#7FD6A3;--lec-no:#F0A39B}
+.lec *{min-width:0}
+.lec-h{font:700 22px/1.25 var(--display);margin:14px 0 8px;scroll-margin-top:12px}
+.lec h5{margin:0}
+.lec-lt{font:700 18px/1.3 var(--display)}
+.lec-ct{font:700 16px/1.3 var(--display);margin:16px 0 6px!important}
+.lec-card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:20px;margin:0 0 16px}
+.lec-card p{margin:0 0 10px}
+.lec-how .plain{color:var(--ink)}
+.lec-sum{font:600 15px var(--body);margin:14px 0 10px}
+.lec-levels{list-style:none;margin:0 0 16px;padding:0;display:grid;gap:12px}
+.lec-lv{background:var(--card);border:1px solid var(--line);border-left-width:5px;border-radius:6px;padding:18px 20px}
+.lec-lv p{margin:0 0 8px}
+.lec-lv.is-done{border-left-color:var(--lec-ok)}
+.lec-lv.is-open{border-left-color:var(--brass)}
+.lec-lv.is-lock{border-style:dashed;border-left-style:dashed}
+.lec-top{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin:0 0 6px}
+.lec-st{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.04em;border:1.5px solid currentColor;border-radius:3px;padding:2px 8px;white-space:nowrap}
+.lec-st.done{color:var(--lec-ok)}.lec-st.open{color:var(--brass)}.lec-st.lock{color:var(--muted)}
+.lec-ru,.lec-res,.lec-lockmsg,.lec-tr,.lec-note,.lec-meta{color:var(--muted)}
+.lec-ru,.lec-res,.lec-lockmsg{font-size:14px}
+.lec-note{font-size:14px;max-width:68ch}
+.lec-meta{margin:0 0 14px;font-size:14px}
+.lec-meta .lec-st{margin-right:6px}
+.lec-btn,.lec-sp{font:600 15px var(--body);min-height:44px;padding:10px 18px;border:1.5px solid var(--ink);border-radius:4px;background:transparent;color:var(--ink);cursor:pointer}
+.lec-btn.main{background:var(--brass);border-color:var(--brass);color:var(--brass-ink)}
+.lec-btn[disabled],.lec-sp[disabled]{opacity:.5;cursor:not-allowed}
+.lec-sp{font-weight:500;font-size:14px;padding:6px 12px;min-height:40px;border-color:var(--line)}
+.lec-row{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 0}
+.lec-warn{border:1.5px solid var(--lec-no);border-radius:6px;padding:10px 14px;margin:0 0 14px;color:var(--ink)}
+.lec-live{margin:0;min-height:0;color:var(--lec-ok);font-weight:600}
+.lec-live:empty{display:none}
+.lec-future{border-style:dashed}
+.lec-reset{margin:8px 0 0}
+.lec-confirm{font-weight:600;margin:0 0 6px}
+.lec details p{color:var(--ink);margin:0 0 12px}
+.lec details p.lec-tr,.lec details p.lec-note,.lec details p.lec-fb{color:var(--muted)}
+.lec .lec-body{padding:0 0 14px}
+.lec-con{margin:0 0 14px}
+.lec-vg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:12px}
+.lec-v{border:1px solid var(--line);border-radius:6px;padding:12px 14px;background:var(--card)}
+.lec-v p{margin:0 0 6px!important;font-size:14.5px}
+.lec-vh{margin:0 0 6px}
+.lec-text{margin:0 0 20px}
+.lec-quote{margin:8px 0 12px;padding:10px 16px;border-left:4px solid var(--brass);background:var(--soft)}
+.lec-quote p{margin:0 0 6px!important}
+.lec-q{border:0;margin:0 0 16px;padding:0}
+.lec-q legend{font:600 16px/1.4 var(--body);padding:0;margin:0 0 8px}
+.lec-o{display:flex;gap:10px;align-items:flex-start;border:1.5px solid var(--line);border-radius:6px;padding:10px 12px;margin:0 0 8px;cursor:pointer;background:var(--paper)}
+.lec-o input{margin-top:4px;accent-color:var(--brass);flex:0 0 auto}
+.lec-fb{font-size:14.5px;margin:-6px 0 14px!important;font-weight:600}
+.lec-fb.ok{color:var(--lec-ok)}.lec-fb.no{color:var(--lec-no)}
+.lec-fb:empty{display:none}
+.lec-phr{list-style:none;margin:0 0 12px;padding:0;display:grid;gap:8px}
+.lec-phr li{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;border:1px solid var(--line);border-radius:6px;padding:8px 12px;background:var(--card)}
+.lec-phr .lec-en{flex:1 1 240px}
+.lec-phr .lec-tr{flex:1 1 100%;font-size:14px}
+.lec-sp-msg{font-size:14px;color:var(--lec-no);margin:0 0 10px}
+.lec-sp-msg:empty{display:none}
+.lec-pr{border:1px solid var(--line);border-radius:6px;margin:0 0 8px;padding:0 14px}
+.lec-pr summary{font:600 15px var(--body);padding:12px 0}
+.lec-start{margin-top:16px}
+.lec-form{margin-top:14px}
+.lec-big{font:700 24px/1.3 var(--display);margin:0 0 8px!important}
+.lec-verdict{font-weight:700}
+.lec-score.is-done{border-left:5px solid var(--lec-ok)}
+.lec-score.is-fail{border-left:5px solid var(--lec-no)}
+.lec-rev{list-style:none;margin:0 0 16px;padding:0;display:grid;gap:10px;counter-reset:lecr}
+.lec-r{counter-increment:lecr;border:1px solid var(--line);border-left-width:5px;border-radius:6px;padding:12px 16px;background:var(--card)}
+.lec-r.ok{border-left-color:var(--lec-ok)}.lec-r.no{border-left-color:var(--lec-no)}
+.lec-r p{margin:0 0 4px}
+.lec-r .lec-rq::before{content:counter(lecr) ". ";font-weight:700}
+.lec-r .lec-rq{font-weight:600}
+.lec-rm{font-weight:700}
+.lec-r.ok .lec-rm{color:var(--lec-ok)}.lec-r.no .lec-rm{color:var(--lec-no)}
+.lec-why{color:var(--muted)}
+.lec button:focus-visible,.lec summary:focus-visible,.lec input:focus-visible,.lec [tabindex="-1"]:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.lec [tabindex="-1"]:focus:not(:focus-visible){outline:none}
+@media (max-width:560px){.lec-card,.lec-lv{padding:14px}.lec-big{font-size:21px}.lec-btn{width:100%}.lec-row .lec-btn{width:100%}}
 </style>
 </head>
 <body>
@@ -421,7 +503,12 @@ details ul.plain,details ol.plain{margin:0 0 8px;color:var(--muted)}
       <div class="rc"><h3>С чего начать</h3><ul class="plain"><li>При уровне Beginner / Elementary сначала подтяните общий английский</li><li>При уровне Intermediate и выше можно начинать Legal English</li><li>Даже высокий общий IELTS не всегда означает готовность к юридическому английскому. Его нужно изучать отдельно.</li></ul></div>
     </div>
     <span id="legal-english"></span>
-    <div class="rc leroute" style="margin-bottom:28px"><h3>Начните здесь</h3><p style="margin:0 0 10px">Маршрут по разделу: идите по порядку или переходите сразу к нужному.</p><ol class="lr"><li><a href="#le-levels">Уровни</a></li><li><a href="#le-dirs">Направления</a></li><li><a href="#le-terms">Избранные термины</a></li><li><a href="#mt">Мини-тест</a></li><li><a href="#le-dict">LAWSTART Dictionary</a></li><li><a href="#le-contract" data-open="le-contract">Contract Language</a></li><li><a href="#le-corr" data-open="le-corr">Legal Correspondence</a></li></ol></div>
+    <div class="rc leroute" style="margin-bottom:28px"><h3>Начните здесь</h3><p style="margin:0 0 10px">Маршрут по разделу: идите по порядку или переходите сразу к нужному.</p><ol class="lr"><li><a href="#le-course">Курс по уровням</a></li><li><a href="#le-levels">Уровни</a></li><li><a href="#le-dirs">Направления</a></li><li><a href="#le-terms">Избранные термины</a></li><li><a href="#mt">Мини-тест</a></li><li><a href="#le-dict">LAWSTART Dictionary</a></li><li><a href="#le-contract" data-open="le-contract">Contract Language</a></li><li><a href="#le-corr" data-open="le-corr">Legal Correspondence</a></li></ol></div>
+<!-- LEC:START -->
+    <h3 class="sub2" id="le-course" style="scroll-margin-top:12px">Курс Legal English по уровням</h3>
+    <p class="sub" style="margin-bottom:14px">Пошаговое обучение: объяснения, лексика, тексты, устная практика и тест на каждом уровне. Следующий уровень открывается только после результата не ниже 80%.</p>
+    <div class="lec" id="lec"><noscript><p class="note">Для работы курса нужен включённый JavaScript.</p></noscript></div>
+<!-- LEC:END -->
     <h3 class="sub2" id="le-levels">Уровни: какой нужен</h3>
     <p class="sub" style="margin-bottom:12px">Ориентиры по шкале CEFR. Это не жёсткое соответствие баллам IELTS: требования зависят от вуза и программы.</p>
     <div class="tw" style="margin-bottom:28px"><table><thead><tr><th>Цель</th><th>Ориентир</th></tr></thead><tbody><tr><td>Читать простые юридические тексты</td><td>B1</td></tr><tr><td>Договоры и корпоративные документы</td><td>B2</td></tr><tr><td>Учёба на LL.M.</td><td>B2–C1</td></tr><tr><td>International / Commercial Law</td><td>C1</td></tr><tr><td>Международные фирмы и арбитраж</td><td>C1–C2</td></tr></tbody></table></div>
@@ -882,6 +969,667 @@ var V={
 (function(){
   var l=document.querySelectorAll('.leroute a[data-open]');
   for(var i=0;i<l.length;i++){l[i].addEventListener('click',function(){var d=document.getElementById(this.getAttribute('data-open'));if(d)d.open=true})}
+})();
+</script>
+<script>
+/* ===== LAWSTART Legal English course: DATA =====
+   To add a level: append one object to LEC_LEVELS with ready:true and the same fields.
+   Each fully implemented level needs: goals, concepts, vocab, texts (with practice questions), speak, test (>=10 questions).
+   Question format: {q:"stem", o:["A","B","C","D"], a:indexOfCorrect, why:"explanation shown after the test"} */
+var LEC_PASS_PERCENT = 80;
+var LEC_LEVELS = [
+{
+ id: 1, ready: true,
+ title: "Foundations of Legal English",
+ ru: "Основы юридического английского",
+ cefr: "ориентир: примерно A2–B1",
+ summary: "Базовая лексика права, стороны, права и обязанности, простые юридические предложения.",
+ goals: [
+  {en: "Recognise and use core legal words: party, clause, obligation, liability, breach, agreement, enforceable, remedy.", ru: "Узнавать и использовать базовые юридические слова."},
+  {en: "Tell the difference between a right, a duty and a prohibition in a short legal sentence.", ru: "Различать право, обязанность и запрет в коротком юридическом предложении."},
+  {en: "Understand the meaning of shall, may, must and must not.", ru: "Понимать значение shall, may, must и must not."},
+  {en: "Read a short legal statement and answer questions about who must do what.", ru: "Читать короткое юридическое положение и отвечать, кто что должен делать."}
+ ],
+ concepts: [
+  {h: "Who is who: parties, rights, duties",
+   en: "A legal text usually names the parties: the people or organisations involved in an agreement or a legal case. Each party has rights (things it is allowed to do or to receive) and duties or obligations (things it must do). If a party does not do what it must do, this may be a breach, and the other party may ask for a remedy.",
+   ru: "В юридическом тексте обычно названы стороны (parties). У каждой стороны есть права (rights) и обязанности (duties, obligations). Если сторона не выполняет обязанность, это может быть нарушением (breach), и другая сторона может требовать средства защиты (remedy)."},
+  {h: "Liability",
+   en: "Liability means legal responsibility. A party that is liable for a loss may have to pay for it or to put things right. How far liability goes depends on the contract and on the law that applies.",
+   ru: "Liability — юридическая ответственность. Сторона, ответственная за убыток, может быть обязана возместить его или исправить ситуацию. Объём ответственности зависит от договора и применимого права."},
+  {h: "Basic sentence patterns: shall, may, must, must not",
+   en: "Traditional legal drafting uses shall for an obligation: “The Seller shall deliver the goods.” May gives permission: “The Buyer may inspect the goods.” The Buyer is allowed to inspect, but does not have to. Must is also used for obligations and is common in modern plain-English drafting. Must not and shall not express a prohibition.",
+   ru: "Shall — обязанность, may — разрешение (можно, но не обязательно), must — обязанность (часто в современном «простом» языке), must not / shall not — запрет."},
+  {h: "Conditions: if, unless, provided that",
+   en: "Many legal sentences have a condition. “If the goods are late, the Buyer may cancel.” means: late goods give the Buyer the right to cancel. “Unless the Buyer pays in full, the Seller is not required to deliver.” means: delivery is required only when the Buyer has paid in full.",
+   ru: "If — «если», unless — «если не / кроме случая, когда». Условие определяет, когда право или обязанность возникают."}
+ ],
+ vocab: [
+  {t: "party", ru: "сторона", def: "a person or organisation that takes part in an agreement or a legal case", ex: "Both parties signed the agreement on Monday."},
+  {t: "agreement", ru: "соглашение, договорённость", def: "a promise or set of promises between two or more parties", ex: "The agreement is in writing."},
+  {t: "clause", ru: "пункт, условие (договора)", def: "one numbered part of a contract or other legal document", ex: "Clause 5 explains how to cancel the contract."},
+  {t: "right", ru: "право", def: "something a person or organisation is allowed to do or to receive", ex: "The tenant has the right to a clean flat."},
+  {t: "duty / obligation", ru: "обязанность", def: "something a person or organisation must do", ex: "The seller’s main obligation is to deliver the goods."},
+  {t: "liability", ru: "ответственность", def: "legal responsibility, for example to pay for loss or damage", ex: "The company has no liability for lost luggage."},
+  {t: "breach", ru: "нарушение", def: "failing to do what a contract or the law requires", ex: "Late payment can be a breach of contract."},
+  {t: "enforceable", ru: "подлежащий принудительному исполнению", def: "something a court can require people to obey", ex: "An enforceable agreement can be defended in court."},
+  {t: "remedy", ru: "средство правовой защиты", def: "what the law gives a person after a wrong, for example damages (money) or an order to perform", ex: "The buyer’s remedy was a refund."},
+  {t: "damages", ru: "возмещение убытков (денежная компенсация)", def: "money a court orders one party to pay to another for loss or harm", ex: "The court awarded damages for the delay."},
+  {t: "binding", ru: "обязательный, имеющий обязательную силу", def: "creating a legal duty that must be followed", ex: "The signed contract is binding on both parties."},
+  {t: "prohibit", ru: "запрещать", def: "to say officially that something must not be done", ex: "The lease prohibits smoking inside the flat."}
+ ],
+ texts: [
+  {title: "Text 1: Sale of goods (original example)",
+   body: ["1. The Seller shall deliver the goods to the Buyer by 1 June.",
+          "2. The Buyer may inspect the goods within three days of delivery.",
+          "3. If the Seller delivers the goods late, the Buyer may cancel the agreement.",
+          "4. The Buyer must pay the price within 14 days of delivery."],
+   note: "General example. Real contracts and the applicable law differ between countries.",
+   qs: [
+    {q: "Who has an obligation to deliver the goods?", o: ["The Buyer", "The Seller", "Both parties", "Nobody"], a: 1, why: "Clause 1: “The Seller shall deliver” — shall expresses a duty of the Seller."},
+    {q: "Must the Buyer inspect the goods?", o: ["Yes, always", "No, the Buyer may inspect but does not have to", "No, inspection is prohibited", "Only the Seller can inspect"], a: 1, why: "Clause 2 uses may: it gives permission, not a duty."},
+    {q: "What can the Buyer do if delivery is late?", o: ["Cancel the agreement", "Keep the goods for free", "Deliver the goods", "Nothing"], a: 0, why: "Clause 3: If the Seller delivers late, the Buyer may cancel the agreement."}
+   ]},
+  {title: "Text 2: Rental flat (original example)",
+   body: ["1. The Tenant must pay the rent on the first day of each month.",
+          "2. The Landlord shall keep the flat in good condition.",
+          "3. The Tenant must not keep animals in the flat.",
+          "4. Unless the Landlord agrees in writing, the Tenant may not sublet the flat."],
+   note: "General example. Rules for rental agreements depend on the country and the contract.",
+   qs: [
+    {q: "Which sentence is a prohibition?", o: ["Clause 1", "Clause 2", "Clause 3", "None of them"], a: 2, why: "“must not keep animals” is a prohibition."},
+    {q: "When may the Tenant sublet the flat?", o: ["Whenever the Tenant wants", "Never", "Only if the Landlord agrees in writing", "Only if the animals leave"], a: 2, why: "“Unless the Landlord agrees in writing” — written consent is the condition."},
+    {q: "Who must keep the flat in good condition?", o: ["The Tenant", "The Landlord", "A neighbour", "The court"], a: 1, why: "Clause 2: The Landlord shall keep the flat in good condition."}
+   ]}
+ ],
+ speak: {
+  phrases: [
+   {en: "The Seller shall deliver the goods by the first of June.", ru: "Продавец обязан поставить товар до 1 июня."},
+   {en: "The Buyer may inspect the goods, but does not have to.", ru: "Покупатель вправе осмотреть товар, но не обязан."},
+   {en: "If a party breaches the agreement, the other party may ask for a remedy.", ru: "Если сторона нарушает соглашение, другая сторона может требовать защиты права."},
+   {en: "Unless the Buyer pays in full, the Seller is not required to deliver.", ru: "Пока покупатель не заплатит полностью, продавец не обязан поставлять."}
+  ],
+  dialogue: {title: "Dialogue: a student asks a tutor", lines: [
+   {who: "Student", en: "Excuse me, what does “obligation” mean in this contract?"},
+   {who: "Tutor", en: "An obligation is something a party must do."},
+   {who: "Student", en: "And what about “may”?"},
+   {who: "Tutor", en: "May gives permission. The party is allowed to act, but does not have to."},
+   {who: "Student", en: "So “shall deliver” means the Seller has a duty?"},
+   {who: "Tutor", en: "Exactly. If the Seller does not deliver, that can be a breach."}
+  ]},
+  prompts: [
+   {q: "Explain in your own words the difference between “may” and “must”.", model: "May gives a permission, so the person can choose. Must creates an obligation, so the person has no choice."},
+   {q: "Describe one obligation of a tenant and one obligation of a landlord.", model: "The tenant must pay the rent on time. The landlord must keep the flat in good condition."}
+  ]
+ },
+ test: [
+  {q: "In a contract, a “party” is …", o: ["a celebration after signing", "a person or organisation that takes part in the agreement", "one numbered section of the contract", "the judge who reads the contract"], a: 1, why: "Party = сторона договора. Numbered sections are clauses."},
+  {q: "“Liability” means …", o: ["permission to enter a building", "a list of documents", "a court building", "legal responsibility, for example to pay for harm or loss"], a: 3, why: "Liability = юридическая ответственность."},
+  {q: "Which sentence expresses an obligation?", o: ["The Tenant shall pay the rent on the first day of each month.", "The Tenant may sublet the flat.", "The Tenant might leave early.", "The Tenant is welcome to ask questions."], a: 0, why: "Shall + verb creates a duty. May gives permission; might and “is welcome” are not obligations."},
+  {q: "“The Buyer may inspect the goods.” This means the Buyer …", o: ["must inspect the goods", "is forbidden to inspect the goods", "is allowed to inspect the goods but does not have to", "has already inspected the goods"], a: 2, why: "May = разрешение (право), а не обязанность."},
+  {q: "A “breach” of contract is …", o: ["failing to do what the contract requires", "signing a contract", "ending a contract by agreement", "a payment of money"], a: 0, why: "Breach = нарушение: the party does not do what it promised."},
+  {q: "An “enforceable” agreement is one that …", o: ["nobody has read", "is written in Latin", "has no parties", "a court can require the parties to follow"], a: 3, why: "Enforceable = подлежащий принудительному исполнению."},
+  {q: "A “remedy” is …", o: ["a medicine", "what the law gives a person after a wrong, for example damages", "a type of contract", "a lawyer’s fee"], a: 1, why: "Remedy = средство защиты (например, damages — денежное возмещение)."},
+  {q: "Text: “The Seller shall deliver the goods by 1 June. If the Seller delivers late, the Buyer may cancel the agreement.” What can the Buyer do if delivery is late?", o: ["The Buyer must keep the goods", "The Buyer must pay extra", "The Buyer may cancel the agreement", "The Buyer must deliver the goods"], a: 2, why: "“If … late, the Buyer may cancel” — the Buyer has the right to cancel."},
+  {q: "“The Tenant must not keep animals in the flat.” This rule is …", o: ["a permission", "a requirement to keep animals", "an option for the Landlord only", "a prohibition"], a: 3, why: "Must not = запрет."},
+  {q: "Text: “Unless the Buyer pays in full, the Seller is not required to deliver.” When must the Seller deliver?", o: ["Always", "Only if the Buyer has paid in full", "Only if the Seller wants to", "Before the Buyer pays anything"], a: 1, why: "“Unless …” introduces a condition: no full payment, no duty to deliver."}
+ ]
+},
+{
+ id: 2, ready: true,
+ title: "Contract Language",
+ ru: "Язык договоров",
+ cefr: "ориентир: примерно B1–B2",
+ summary: "Структура договора, типовые пункты, прекращение, изменения и применимое право.",
+ goals: [
+  {en: "Describe the main parts of a contract and what each part does.", ru: "Описывать основные части договора и их роль."},
+  {en: "Understand common clauses: termination, indemnity, force majeure, amendment, governing law.", ru: "Понимать типовые пункты: прекращение, возмещение (indemnity), форс-мажор, изменения, применимое право."},
+  {en: "Identify the rights and obligations of each party in a short provision.", ru: "Находить права и обязанности сторон в коротком положении."},
+  {en: "Read and interpret short contract provisions in plain English.", ru: "Читать и объяснять короткие положения договора."}
+ ],
+ concepts: [
+  {h: "The structure of a contract",
+   en: "Contracts differ, but many follow a similar order: (1) title; (2) date and parties; (3) background or recitals (often introduced by “Whereas”); (4) definitions; (5) the main obligations of each party, including price and payment; (6) term and termination; (7) liability, warranties and indemnities; (8) force majeure; (9) notices, amendment and entire agreement; (10) governing law and dispute resolution; (11) signatures.",
+   ru: "Типовой порядок: название; дата и стороны; вводная часть (recitals, «Whereas»); определения; основные обязанности, цена и оплата; срок и прекращение; ответственность, гарантии, возмещение; форс-мажор; уведомления, изменения, «полнота соглашения»; применимое право и споры; подписи. Структура в разных договорах и странах отличается."},
+  {h: "Termination, amendment, notices",
+   en: "Termination clauses say how and when a party may end the contract, for example by giving written notice. An amendment is a change to the contract; many contracts say that an amendment is valid only if it is in writing and signed by both parties. A notice clause explains how formal messages must be sent (for example, in writing to an address).",
+   ru: "Termination — прекращение договора (например, письменным уведомлением за N дней). Amendment — изменение договора; часто допускается только в письменной форме с подписями обеих сторон. Notice — порядок направления официальных уведомлений."},
+  {h: "Indemnity, warranty, force majeure",
+   en: "To indemnify means to compensate another party for a loss or cost, in the situations the contract describes. A warranty is a promise that a fact is true or that something meets a stated standard. Force majeure describes events outside the parties’ control (for example, a natural disaster); the clause says what happens to the parties’ obligations if such an event occurs. In many legal systems, force majeure helps only as far as the contract or the applicable law provides.",
+   ru: "Indemnify — возместить убытки или расходы по условиям договора. Warranty — заверение/гарантия. Force majeure — обстоятельства непреодолимой силы; последствия определяются договором и применимым правом."},
+  {h: "Governing law and jurisdiction",
+   en: "A governing law clause says which country’s law is used to interpret the contract, for example “the laws of England and Wales”. A jurisdiction clause says which court (or arbitration) will decide disputes. These are two different questions. The words and ideas in this lesson are general: contract law varies between jurisdictions, for example common-law systems and civil-law systems.",
+   ru: "Governing law — какое право применяется к договору. Jurisdiction — какой суд (или арбитраж) разрешает споры. Это разные вопросы. Договорное право различается в странах общего и континентального права."}
+ ],
+ vocab: [
+  {t: "governing law", ru: "применимое право", def: "the law that applies to a contract and decides how it is interpreted", ex: "The governing law of this Agreement is the law of England and Wales."},
+  {t: "jurisdiction", ru: "юрисдикция", def: "the power of a court to decide a case; also, a country or state with its own legal system", ex: "The courts of Paris have jurisdiction over any dispute."},
+  {t: "terminate", ru: "прекращать (договор)", def: "to end a contract before or at the end of its term", ex: "Either party may terminate the Agreement by giving written notice."},
+  {t: "indemnify", ru: "возмещать убытки", def: "to compensate another person for loss or cost, as the contract provides", ex: "The Supplier shall indemnify the Customer against losses caused by the Supplier’s breach."},
+  {t: "amendment", ru: "изменение, поправка", def: "a change to the terms of a contract or law", ex: "Any amendment must be in writing."},
+  {t: "force majeure", ru: "обстоятельства непреодолимой силы", def: "an event outside the parties’ control that may excuse them from performing, if the contract or the law says so", ex: "A flood is an example of a force majeure event."},
+  {t: "warranty", ru: "гарантия, заверение", def: "a promise that a statement is true or that something meets a stated standard", ex: "The Seller gives a warranty that the goods are new."},
+  {t: "consideration", ru: "встречное предоставление (в общем праве)", def: "in common-law systems, something of value that each party gives in exchange for the other’s promise", ex: "The price is the Buyer’s consideration for the goods."},
+  {t: "assign", ru: "уступать (права)", def: "to transfer a right to another person", ex: "The Supplier may not assign its rights without the Customer’s consent."},
+  {t: "waive", ru: "отказываться (от права)", def: "to give up a right voluntarily", ex: "A party that does not complain does not automatically waive its rights."},
+  {t: "notice", ru: "уведомление", def: "a formal message sent to the other party under the contract", ex: "Notice must be sent in writing to the address in clause 12."},
+  {t: "entire agreement", ru: "полнота соглашения", def: "a clause saying that the written contract contains the whole agreement of the parties", ex: "The entire agreement clause excludes earlier promises that are not written in the contract."}
+ ],
+ texts: [
+  {title: "Provision 1: Termination (original example)",
+   body: ["12.1 Either party may terminate this Agreement by giving thirty (30) days’ written notice to the other party.",
+          "12.2 Either party may terminate this Agreement immediately by written notice if the other party commits a material breach and does not remedy it within fourteen (14) days after receiving written notice of the breach."],
+   note: "General example. Notice periods and the effect of termination depend on the contract and the applicable law.",
+   qs: [
+    {q: "Who may terminate under clause 12.1?", o: ["Only the first party named", "Either party", "Only a court", "Neither party"], a: 1, why: "“Either party may terminate” gives both parties the right."},
+    {q: "How much notice does clause 12.1 require?", o: ["Fourteen days", "Immediate", "Thirty days, in writing", "Ninety days, orally"], a: 2, why: "“thirty (30) days’ written notice”."},
+    {q: "When may a party terminate immediately under clause 12.2?", o: ["Whenever it wishes", "If the other party commits a material breach and does not fix it within 14 days of notice", "After one day of delay", "Only after a court order"], a: 1, why: "Immediate termination needs a material breach plus failure to remedy it within 14 days after written notice."}
+   ]},
+  {title: "Provision 2: Amendment and governing law (original example)",
+   body: ["15.1 No amendment to this Agreement is effective unless it is in writing and signed by both parties.",
+          "15.2 This Agreement and any dispute arising out of it shall be governed by the laws of England and Wales.",
+          "15.3 The courts of England and Wales shall have exclusive jurisdiction."],
+   note: "Example uses the law of England and Wales for illustration only; it is not a recommendation to choose that law.",
+   qs: [
+    {q: "Is a change agreed only by telephone effective under clause 15.1?", o: ["Yes", "No, it must be in writing and signed by both parties", "Yes, if one party agrees", "Yes, after 30 days"], a: 1, why: "15.1 requires writing and signatures of both parties."},
+    {q: "Which law governs the Agreement?", o: ["The law of England and Wales", "The law of any country the Buyer chooses", "No law", "International custom only"], a: 0, why: "Clause 15.2 names the law of England and Wales."},
+    {q: "What does clause 15.3 decide?", o: ["The price", "Which courts decide disputes", "The date of delivery", "Who signs first"], a: 1, why: "Jurisdiction = which courts. It is different from governing law."}
+   ]}
+ ],
+ speak: {
+  phrases: [
+   {en: "Either party may terminate this Agreement by giving thirty days’ written notice.", ru: "Любая сторона может расторгнуть договор, направив письменное уведомление за 30 дней."},
+   {en: "The Supplier shall indemnify the Customer against any loss caused by its breach.", ru: "Поставщик возместит заказчику убытки, вызванные его нарушением."},
+   {en: "No amendment is effective unless it is in writing and signed by both parties.", ru: "Изменения действительны только в письменной форме с подписями обеих сторон."},
+   {en: "This Agreement is governed by the laws of England and Wales.", ru: "К договору применяется право Англии и Уэльса."}
+  ],
+  dialogue: {title: "Dialogue: reviewing a clause with a colleague", lines: [
+   {who: "Junior lawyer", en: "Could you help me with clause twelve? I am not sure about the notice period."},
+   {who: "Colleague", en: "Of course. Either party may terminate by giving thirty days’ written notice."},
+   {who: "Junior lawyer", en: "So an email is not enough if the contract requires written notice by post?"},
+   {who: "Colleague", en: "That depends on the notice clause. Please check how notices must be sent."},
+   {who: "Junior lawyer", en: "And what happens if there is a force majeure event?"},
+   {who: "Colleague", en: "The force majeure clause should say. It usually explains which obligations are suspended."}
+  ]},
+  prompts: [
+   {q: "Explain the difference between governing law and jurisdiction.", model: "Governing law is the law used to interpret the contract. Jurisdiction means which court or tribunal decides the disputes."},
+   {q: "Explain what “indemnify” means, using an example.", model: "To indemnify means to compensate another party for a loss. For example, the supplier indemnifies the customer if the supplier’s breach causes the customer a loss."}
+  ]
+ },
+ test: [
+  {q: "Which part of a contract usually appears first?", o: ["The signature block", "The termination clause", "The notices clause", "The title and the description of the parties"], a: 3, why: "Contracts normally start with the title, the date and the parties. Signatures are at the end."},
+  {q: "A governing law clause says …", o: ["which party wins any dispute", "which country’s or state’s law applies to the contract", "the date of signature", "the price of the goods"], a: 1, why: "Governing law = применимое право."},
+  {q: "To “terminate” a contract means to …", o: ["extend it", "translate it", "end it", "sign it"], a: 2, why: "Terminate = прекратить договор."},
+  {q: "To “indemnify” someone means to …", o: ["compensate them for a loss as the contract provides", "inspect their goods", "delay a payment", "witness their signature"], a: 0, why: "Indemnify = возместить убытки (в случаях, описанных договором)."},
+  {q: "An “amendment” is …", o: ["a complaint to a court", "a final payment", "a court order", "a change to the terms of the contract"], a: 3, why: "Amendment = изменение условий."},
+  {q: "“Force majeure” refers to …", o: ["a deliberate breach of contract", "an event outside the parties’ control that may excuse performance if the contract or law says so", "a type of payment", "a lawyer’s fee"], a: 1, why: "Force majeure = обстоятельства непреодолимой силы; effect depends on the contract and applicable law."},
+  {q: "Text: “Either party may terminate this Agreement by giving thirty (30) days’ written notice.” Who may terminate?", o: ["Only the Supplier", "Only with a court’s permission", "Either party", "Only the party that signed first"], a: 2, why: "“Either party” = любая из сторон."},
+  {q: "Text: “No amendment is effective unless it is in writing and signed by both parties.” A change agreed only by telephone is …", o: ["effective", "not effective under this clause", "effective after 30 days", "effective if one party agrees"], a: 1, why: "The clause requires writing and signatures of both parties."},
+  {q: "To “waive” a right means to …", o: ["transfer it to someone else", "use it immediately", "give it up voluntarily", "ask a court to enforce it"], a: 2, why: "Waive = отказаться от права. Transfer is assign."},
+  {q: "Text: “The Supplier shall indemnify the Customer against any loss arising from the Supplier’s breach.” Who compensates whom?", o: ["The Customer compensates the Supplier", "The Supplier compensates the Customer", "A court compensates both", "Nobody compensates anybody"], a: 1, why: "The Supplier indemnifies = the Supplier compensates the Customer."}
+ ]
+},
+{
+ id: 3, ready: true,
+ title: "Legal Correspondence",
+ ru: "Юридическая переписка",
+ cefr: "ориентир: примерно B2",
+ summary: "Формальные письма и e-mail, вежливые и точные просьбы, краткое изложение правового вопроса.",
+ goals: [
+  {en: "Write a clear subject line and a professional opening for a formal legal email.", ru: "Писать понятную тему письма и профессиональное начало формального письма."},
+  {en: "Make polite but precise requests for information and documents, with a deadline.", ru: "Формулировать вежливые и точные просьбы о сведениях и документах со сроком."},
+  {en: "Choose clear and professional wording and avoid vague or too casual phrases.", ru: "Выбирать ясные формулировки и избегать расплывчатых или слишком неформальных."},
+  {en: "Summarise a legal issue in writing: facts, issue, request.", ru: "Кратко излагать правовой вопрос: факты, вопрос, просьба."}
+ ],
+ concepts: [
+  {h: "The shape of a formal legal email",
+   en: "A good legal email has: a clear subject line with a reference (for example, the name of the contract or a file number); a polite greeting; one sentence that explains why you are writing; the background facts; the request; a deadline; a polite closing; your name and role. Keep paragraphs short. Do not hide the request in the middle of a long text.",
+   ru: "Тема с ссылкой на документ или номер дела; вежливое обращение; одно предложение с целью письма; факты; просьба; срок; вежливое завершение; подпись. Абзацы короткие, просьба должна быть заметна."},
+  {h: "Greetings and endings",
+   en: "If you do not know the name, British formal letters use “Dear Sir or Madam” and end with “Yours faithfully”. If you use a name, such as “Dear Ms Karimova”, end with “Yours sincerely”. In emails, “Kind regards” is common and acceptable. American English often uses “Sincerely” or “Best regards”. Follow the style of the organisation you write to.",
+   ru: "В британской традиции: Dear Sir or Madam → Yours faithfully; Dear Ms Karimova → Yours sincerely. В e-mail часто пишут Kind regards. Американский вариант — Sincerely / Best regards."},
+  {h: "Polite but precise requests",
+   en: "Polite does not mean vague. Compare: “Send the documents.” (too direct), “Please send documents soon.” (polite but vague), and “I would be grateful if you could send me the signed contract and the invoice by 5 p.m. on Friday, 16 October.” (polite and precise). Name the document, name the action and give a date and time.",
+   ru: "Вежливо ≠ расплывчато. Назовите документ, действие и срок: «I would be grateful if you could send … by 5 p.m. on Friday, 16 October.»"},
+  {h: "Summarising a legal issue",
+   en: "Use three steps: Facts (what happened), Issue (what question needs an answer) and Request (what you ask the reader to do). Example: “Facts: The Supplier delivered the goods on 10 June, nine days late. Issue: Whether the Buyer may cancel the agreement under clause 3. Request: Please confirm your position by Friday.”",
+   ru: "Структура: Facts (факты) → Issue (вопрос) → Request (просьба). Не смешивайте факты и выводы."}
+ ],
+ vocab: [
+  {t: "with reference to", ru: "в связи с, ссылаясь на", def: "a formal phrase used to point to an earlier document or message", ex: "With reference to your letter of 3 October, I confirm the following."},
+  {t: "further to", ru: "в продолжение (разговора, письма)", def: "a formal phrase used to continue an earlier conversation or message", ex: "Further to our call this morning, I enclose the draft."},
+  {t: "Please find attached", ru: "Прилагаю (во вложении)", def: "a formal way to say that a document is attached to your email", ex: "Please find attached the signed Supply Agreement."},
+  {t: "I would be grateful if you could …", ru: "Буду признателен, если Вы сможете …", def: "a polite, formal way to make a request", ex: "I would be grateful if you could confirm the delivery date."},
+  {t: "acknowledge receipt", ru: "подтвердить получение", def: "to tell the sender that you have received something", ex: "Please acknowledge receipt of this email."},
+  {t: "at your earliest convenience", ru: "при первой возможности", def: "as soon as you reasonably can; it does not give an exact date", ex: "Please reply at your earliest convenience."},
+  {t: "for the avoidance of doubt", ru: "во избежание сомнений", def: "a phrase used to make something completely clear", ex: "For the avoidance of doubt, the deadline is 16 October."},
+  {t: "in accordance with", ru: "в соответствии с", def: "following a rule, clause or instruction", ex: "We will deliver the goods in accordance with clause 4."},
+  {t: "deadline", ru: "крайний срок", def: "the latest date or time by which something must be done", ex: "The deadline for comments is 5 p.m. on Friday."},
+  {t: "confidential", ru: "конфиденциальный", def: "secret; not to be shared with other people without permission", ex: "This email is confidential and intended only for the addressee."},
+  {t: "cc (carbon copy)", ru: "копия (в копии)", def: "a person who receives a copy of an email for information", ex: "I have copied our client in cc."},
+  {t: "Yours faithfully / Yours sincerely", ru: "С уважением (британские формулы)", def: "formal endings of a letter: faithfully after “Dear Sir or Madam”, sincerely after a name", ex: "Dear Ms Karimova, … Yours sincerely, A. Smith"}
+ ],
+ texts: [
+  {title: "Email 1: Request for documents (original example)",
+   body: ["Subject: Request for documents – Supply Agreement dated 1 September (ref. LS/2026/14)",
+          "Dear Mr Omarov,",
+          "I am writing on behalf of Alpha Trading LLP with reference to the Supply Agreement dated 1 September.",
+          "I would be grateful if you could send me (1) a signed copy of the Agreement and (2) the invoice for the first delivery. For the avoidance of doubt, we need both documents by 5 p.m. on Friday, 16 October.",
+          "Please acknowledge receipt of this email.",
+          "Kind regards,",
+          "Dana Sarsen",
+          "Legal Assistant"],
+   note: "Names and companies are invented.",
+   qs: [
+    {q: "What is the purpose of the email?", o: ["To cancel the Agreement", "To request two documents", "To complain about the price", "To invite Mr Omarov to a meeting"], a: 1, why: "The writer asks for a signed copy of the Agreement and the invoice."},
+    {q: "What is the deadline?", o: ["At your earliest convenience", "5 p.m. on Friday, 16 October", "Next year", "No deadline is given"], a: 1, why: "A precise date and time are given."},
+    {q: "Which phrase makes the request polite?", o: ["Send me", "I would be grateful if you could", "You must", "Hurry up"], a: 1, why: "“I would be grateful if you could …” is a polite formal request."}
+   ]},
+  {title: "Email 2: Weak and improved versions (original example)",
+   body: ["Weak: “Hi. Where is the money? Pay now!!!”",
+          "Improved: “Dear Ms Nurlan, With reference to invoice no. 45 dated 1 October, I note that the payment of USD 2,000 has not yet been received. I would be grateful if you could confirm when payment will be made. Please reply by Friday, 16 October. Kind regards, Ruslan Aliyev.”"],
+   note: "Names and amounts are invented.",
+   qs: [
+    {q: "Why is the improved email better?", o: ["It is longer", "It states the invoice, the problem, the request and the date politely and precisely", "It uses exclamation marks", "It avoids the topic of payment"], a: 1, why: "It identifies the document, states the facts, makes a clear request and gives a date."},
+    {q: "Which phrase refers to an earlier document?", o: ["Kind regards", "With reference to invoice no. 45", "Pay now", "Hi"], a: 1, why: "“With reference to …” points to something already sent."},
+    {q: "What does the writer ask Ms Nurlan to do?", o: ["Confirm when payment will be made", "Cancel the invoice", "Send a new contract", "Visit the office"], a: 0, why: "“confirm when payment will be made”."}
+   ]}
+ ],
+ speak: {
+  phrases: [
+   {en: "I am writing with reference to the Supply Agreement dated first of September.", ru: "Пишу в связи с договором поставки от 1 сентября."},
+   {en: "I would be grateful if you could send me a signed copy by five p.m. on Friday.", ru: "Буду признателен, если Вы пришлёте подписанную копию до 17:00 в пятницу."},
+   {en: "Please acknowledge receipt of this email.", ru: "Пожалуйста, подтвердите получение этого письма."},
+   {en: "For the avoidance of doubt, the deadline is the sixteenth of October.", ru: "Во избежание сомнений: срок — 16 октября."}
+  ],
+  dialogue: {title: "Dialogue: a phone call before an email", lines: [
+   {who: "Lawyer", en: "Good morning, this is Dana Sarsen from Alpha Trading. I am calling about the Supply Agreement."},
+   {who: "Client", en: "Good morning. How can I help?"},
+   {who: "Lawyer", en: "We have not yet received the signed copy. Could you send it by Friday?"},
+   {who: "Client", en: "Yes, I will send it by five p.m. on Friday."},
+   {who: "Lawyer", en: "Thank you. I will confirm this by email. Please acknowledge receipt."},
+   {who: "Client", en: "Of course. Thank you for your call."}
+  ]},
+  prompts: [
+   {q: "Politely ask a colleague to send you a document by Friday. Say it aloud.", model: "I would be grateful if you could send me the document by five p.m. on Friday."},
+   {q: "Summarise a legal issue in three short sentences: facts, issue, request.", model: "The Supplier delivered the goods nine days late. The question is whether the Buyer may cancel the agreement. Please confirm your position by Friday."}
+  ]
+ },
+ test: [
+  {q: "Which subject line is the best for an email requesting documents?", o: ["Hello", "URGENT!!!", "Question", "Request for documents – Supply Agreement No. 12 (ref. LS/2026/14)"], a: 3, why: "A clear subject names the purpose and gives a reference."},
+  {q: "You do not know the name of the person you write to. Which greeting is the most suitable in a formal letter?", o: ["Hi guys,", "Dear Sir or Madam,", "Yo,", "Hello my friend,"], a: 1, why: "Dear Sir or Madam is the formal greeting when the name is unknown."},
+  {q: "Which request is polite and precise?", o: ["I would be grateful if you could send me the signed contract by 15 October.", "Send the contract.", "Contract?", "You must send the contract."], a: 0, why: "It is polite and names the document, the action and the date."},
+  {q: "In a British formal letter that begins “Dear Sir or Madam”, the usual ending is …", o: ["Yours sincerely", "Yours faithfully", "See you", "Cheers"], a: 1, why: "Convention: Dear Sir or Madam → Yours faithfully. American English often uses Sincerely."},
+  {q: "“Further to our call yesterday, …” means that you are …", o: ["ending the conversation", "refusing the request", "referring to the earlier call and continuing from it", "complaining about the call"], a: 2, why: "Further to = в продолжение предыдущего разговора."},
+  {q: "“At your earliest convenience” means …", o: ["on a date exactly one year from now", "as soon as you reasonably can", "never", "only after a court order"], a: 1, why: "It is polite but not a precise date. If the date matters, state it."},
+  {q: "“Please acknowledge receipt” asks the reader to …", o: ["confirm that they have received the email or document", "pay an invoice", "sign a contract", "forward the email to a court"], a: 0, why: "Acknowledge receipt = подтвердить получение."},
+  {q: "Which sentence is the best opening of a formal email?", o: ["Long time no see!", "I am writing to request copies of the documents listed below.", "Hey, quick thing.", "Not sure if you remember me."], a: 1, why: "It states the purpose in the first sentence."},
+  {q: "When you summarise a legal issue, which structure is the most helpful?", o: ["Jokes, then the conclusion", "Only the conclusion without facts", "Facts, then the issue, then the request", "Random order"], a: 2, why: "Facts → Issue → Request is clear for the reader."},
+  {q: "Which sentence gives the most precise deadline?", o: ["Please reply soon.", "Reply whenever you can.", "ASAP!!!", "Please reply by 5 p.m. on Friday, 16 October."], a: 3, why: "A date and time leave no doubt."}
+ ]
+}
+];
+/* Future levels: shown on the page only as an announcement, not as lessons. */
+var LEC_FUTURE = ["Negotiations", "Case-law analysis", "Legal memoranda", "Oral presentations", "Preparation for international legal education"];
+
+/* ===== LAWSTART Legal English course: LOGIC (scoped to #lec) ===== */
+(function(){
+  var root=document.getElementById('lec');
+  if(!root||typeof LEC_LEVELS==='undefined')return;
+  var LV=LEC_LEVELS.filter(function(l){return l.ready});
+  var PASS=LEC_PASS_PERCENT;
+  var KEY='lawstart.legalEnglish.progress.v1';
+  var corrupt=false,canStore=false,userNav=false,confirmReset=false,statusMsg='';
+  var view={name:'roadmap',idx:0,result:null};
+
+  function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!==undefined&&x!==null)e.textContent=x;return e}
+  function en(t,c,x){var e=el(t,c,x);e.setAttribute('lang','en');return e}
+  function isInt(n){return typeof n==='number'&&isFinite(n)&&Math.floor(n)===n}
+  function isPass(score,total){return total>0&&score*100>=PASS*total}
+  function pct(score,total){return total?Math.round(score*100/total):0}
+  function has(o,k){return Object.prototype.hasOwnProperty.call(o,k)}
+
+  /* ---- storage (versioned key, graceful failures) ---- */
+  try{var k='__lec_probe';localStorage.setItem(k,'1');localStorage.removeItem(k);canStore=true}catch(e){canStore=false}
+  function empty(){return {v:1,levels:{}}}
+  function validEntry(e,lv){
+    return e&&typeof e==='object'&&isInt(e.best)&&isInt(e.total)&&isInt(e.attempts)&&e.total===lv.test.length&&e.best>=0&&e.best<=e.total&&e.attempts>=1&&e.attempts<=100000;
+  }
+  function load(){
+    var raw=null;
+    if(canStore){try{raw=localStorage.getItem(KEY)}catch(e){canStore=false}}
+    if(raw===null||raw===undefined)return empty();
+    try{
+      var o=JSON.parse(raw);
+      if(!o||typeof o!=='object'||o.v!==1||!o.levels||typeof o.levels!=='object'||Array.isArray(o.levels))throw new Error('shape');
+      var out=empty();
+      LV.forEach(function(lv){
+        if(!has(o.levels,lv.id))return;
+        var e=o.levels[lv.id];
+        if(!validEntry(e,lv)){corrupt=true;return}
+        out.levels[lv.id]={best:e.best,total:e.total,attempts:e.attempts,last:(isInt(e.last)&&e.last>=0&&e.last<=e.total)?e.last:e.best};
+      });
+      return out;
+    }catch(err){
+      corrupt=true;
+      try{localStorage.removeItem(KEY)}catch(e2){}
+      return empty();
+    }
+  }
+  var st=load();
+  function save(){
+    if(!canStore)return;
+    try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){canStore=false}
+  }
+  function entry(lv){return has(st.levels,lv.id)?st.levels[lv.id]:null}
+  function passed(lv){var e=entry(lv);return !!e&&isPass(e.best,e.total)}
+  /* a level counts as passed only if every earlier level is passed too (guards against inconsistent saved data) */
+  function cleared(i){for(var j=0;j<=i;j++){if(!passed(LV[j]))return false}return true}
+  function unlocked(i){return i===0||cleared(i-1)}
+  function doneCount(){var n=0;LV.forEach(function(l,i){if(cleared(i))n++});return n}
+
+  /* ---- speech (browser text-to-speech only; no pronunciation scoring) ---- */
+  var tts=false;
+  try{tts=('speechSynthesis' in window)&&(typeof SpeechSynthesisUtterance!=='undefined')}catch(e){tts=false}
+  var TTS_FAIL='Не удалось воспроизвести звук в этом браузере. Прочитайте фразу вслух самостоятельно.';
+  var TTS_NONE='Озвучивание недоступно в этом браузере. Прочитайте фразы вслух самостоятельно: сайт не оценивает произношение.';
+  function voice(){
+    var vs=[];try{vs=window.speechSynthesis.getVoices()||[]}catch(e){}
+    var i,pick=null;
+    for(i=0;i<vs.length;i++){if(/^en[-_]GB/i.test(vs[i].lang)){pick=vs[i];break}}
+    if(!pick)for(i=0;i<vs.length;i++){if(/^en/i.test(vs[i].lang)){pick=vs[i];break}}
+    return pick;
+  }
+  function utter(text,msg){
+    var u=new SpeechSynthesisUtterance(text);
+    u.lang='en-GB';var v=voice();if(v){u.voice=v;u.lang=v.lang}
+    u.rate=0.9;
+    u.onerror=function(ev){if(!ev||(ev.error!=='canceled'&&ev.error!=='interrupted'))msg.textContent=TTS_FAIL};
+    return u;
+  }
+  function say(texts,msg){
+    msg.textContent='';
+    if(!tts){msg.textContent=TTS_NONE;return}
+    try{
+      window.speechSynthesis.cancel();
+      (Array.isArray(texts)?texts:[texts]).forEach(function(t){window.speechSynthesis.speak(utter(t,msg))});
+    }catch(e){msg.textContent=TTS_FAIL}
+  }
+  function stopSpeech(){try{if(tts)window.speechSynthesis.cancel()}catch(e){}}
+  function speakBtn(text,msg,label){
+    var b=el('button','lec-sp','🔊 Прослушать');b.type='button';
+    b.setAttribute('aria-label','Прослушать: '+(label||text));
+    if(!tts){b.disabled=true}else{b.onclick=function(){say(text,msg)}}
+    return b;
+  }
+
+  /* ---- builders ---- */
+  function btn(text,cls,fn){var b=el('button','lec-btn'+(cls?' '+cls:''),text);b.type='button';if(fn)b.onclick=fn;return b}
+  function badge(text,cls){return el('span','lec-st '+cls,text)}
+  function status(lv,i){
+    if(cleared(i))return {t:'✓ Пройден',c:'done',k:'done'};
+    if(unlocked(i))return {t:'Доступен',c:'open',k:'open'};
+    return {t:'🔒 Закрыт',c:'lock',k:'lock'};
+  }
+  function resultLine(lv){
+    var e=entry(lv);
+    if(!e)return 'Тест ещё не проходился.';
+    return 'Лучший результат: '+e.best+' из '+e.total+' ('+pct(e.best,e.total)+'%) · попыток: '+e.attempts;
+  }
+  function go(name,idx,focusFn){
+    userNav=true;stopSpeech();view.name=name;if(idx!==undefined)view.idx=idx;statusMsg='';render(focusFn);
+  }
+  function section(title,openByDefault){
+    var d=el('details');if(openByDefault)d.open=true;
+    d.appendChild(el('summary','',title));
+    var b=el('div','lec-body');d.appendChild(b);return {d:d,b:b};
+  }
+  function radioQ(q,qi,name,onPick){
+    var fs=el('fieldset','lec-q');
+    var lg=el('legend','',(qi+1)+'. ');lg.appendChild(en('span','',q.q));lg.tabIndex=-1;fs.appendChild(lg);
+    q.o.forEach(function(opt,k){
+      var lb=el('label','lec-o');
+      var r=document.createElement('input');r.type='radio';r.name=name;r.value=String(k);
+      if(onPick)r.addEventListener('change',function(){onPick(k)});
+      lb.appendChild(r);lb.appendChild(en('span','',opt));fs.appendChild(lb);
+    });
+    return {fs:fs,lg:lg};
+  }
+
+  /* ---- views ---- */
+  function viewRoadmap(){
+    var wrap=el('div');
+    var h=el('h4','lec-h','Как устроен курс');h.tabIndex=-1;wrap.appendChild(h);
+    var how=el('div','lec-card lec-how');
+    how.appendChild(el('p','','Учитесь по порядку: изучите уровень, пройдите итоговый тест и откройте следующий. Следующий уровень открывается только после результата не ниже '+PASS+'% (например, 8 из 10).'));
+    var ul=el('ul','plain');
+    ['Каждый уровень: цели, объяснения, лексика, тексты с упражнениями, устная практика и итоговый тест.',
+     'После теста вы видите результат в баллах и процентах и пояснения к ошибкам. Тест можно пересдавать.',
+     'Прогресс хранится только в этом браузере на этом устройстве и не переносится на другие устройства. Личные данные не собираются.',
+     'Это учебная проверка, а не экзамен под наблюдением: ответы на странице можно найти. Курс не заменяет IELTS, TOEFL, требования вузов и профессиональную юридическую квалификацию. Это не юридическая консультация.'
+    ].forEach(function(t){ul.appendChild(el('li','',t))});
+    how.appendChild(ul);wrap.appendChild(how);
+
+    var notices=[];
+    if(corrupt)notices.push('Часть сохранённого прогресса была повреждена и сброшена. Пройдите затронутые тесты заново.');
+    if(!canStore)notices.push('Хранилище браузера недоступно (например, режим приватного просмотра или запрет сайтов). Прогресс сохранится только до закрытия или обновления этой страницы.');
+    notices.forEach(function(n){var p=el('p','lec-warn',n);p.setAttribute('role','note');wrap.appendChild(p)});
+
+    wrap.appendChild(el('p','lec-sum','Пройдено уровней: '+doneCount()+' из '+LV.length));
+    var ol=el('ol','lec-levels');
+    LV.forEach(function(lv,i){
+      var s=status(lv,i);
+      var li=el('li','lec-lv is-'+s.k);
+      var top=el('div','lec-top');
+      var t=el('h5','lec-lt');t.appendChild(document.createTextNode('Level '+lv.id+' — '));t.appendChild(en('span','',lv.title));top.appendChild(t);
+      top.appendChild(badge(s.t,s.c));li.appendChild(top);
+      li.appendChild(el('p','lec-ru',lv.ru+' · '+lv.cefr));
+      li.appendChild(el('p','',lv.summary));
+      li.appendChild(el('p','lec-res',resultLine(lv)));
+      if(s.k==='lock'){
+        li.appendChild(el('p','lec-lockmsg','Откроется после прохождения уровня '+LV[i-1].id+' с результатом не ниже '+PASS+'%.'));
+        var lb=btn('Закрыто',null);lb.disabled=true;li.appendChild(lb);
+      }else{
+        li.appendChild(btn(s.k==='done'?'Повторить материалы или тест':'Открыть уровень','main',function(){if(unlocked(i))go('level',i)}));
+      }
+      ol.appendChild(li);
+    });
+    wrap.appendChild(ol);
+
+    var fut=el('div','lec-card lec-future');
+    fut.appendChild(el('h5','lec-lt','Будущие уровни: в разработке'));
+    fut.appendChild(el('p','','Уроков и тестов для этих уровней пока нет. Они не входят в курс и не засчитываются:'));
+    var fl=el('ul','plain');LEC_FUTURE.forEach(function(x){fl.appendChild(en('li','',x))});fut.appendChild(fl);
+    wrap.appendChild(fut);
+
+    var rs=el('div','lec-reset');
+    if(!confirmReset){
+      rs.appendChild(btn('Сбросить прогресс',null,function(){confirmReset=true;userNav=true;render(function(){return document.getElementById('lec-confirm')})}));
+    }else{
+      var cp=el('p','lec-confirm','Сбросить весь прогресс курса? Результаты тестов и открытые уровни будут удалены в этом браузере.');cp.id='lec-confirm';cp.tabIndex=-1;rs.appendChild(cp);
+      var row=el('div','lec-row');
+      row.appendChild(btn('Да, сбросить','main',function(){
+        st=empty();corrupt=false;
+        if(canStore){try{localStorage.removeItem(KEY)}catch(e){canStore=false}}
+        confirmReset=false;statusMsg='Прогресс сброшен.';userNav=true;render(function(){return root.querySelector('.lec-h')});
+      }));
+      row.appendChild(btn('Отмена',null,function(){confirmReset=false;userNav=true;render(function(){return root.querySelector('.lec-reset button')})}));
+      rs.appendChild(row);
+    }
+    wrap.appendChild(rs);
+    return {node:wrap,focus:h};
+  }
+
+  function viewLevel(){
+    var lv=LV[view.idx],i=view.idx;
+    var wrap=el('div');
+    wrap.appendChild(btn('← Все уровни',null,function(){go('roadmap')}));
+    var h=el('h4','lec-h');h.tabIndex=-1;h.appendChild(document.createTextNode('Level '+lv.id+' — '));h.appendChild(en('span','',lv.title));wrap.appendChild(h);
+    var s=status(lv,i);
+    var meta=el('p','lec-meta');meta.appendChild(badge(s.t,s.c));meta.appendChild(document.createTextNode(' '+lv.ru+' · '+lv.cefr+'. '+resultLine(lv)));
+    wrap.appendChild(meta);
+
+    var sec=section('1. Цели уровня / Learning objectives',true);
+    var gl=el('ul','plain');
+    lv.goals.forEach(function(g){var li=el('li');li.appendChild(en('span','',g.en));li.appendChild(el('span','lec-tr',' — '+g.ru));gl.appendChild(li)});
+    sec.b.appendChild(gl);wrap.appendChild(sec.d);
+
+    sec=section('2. Объяснения / Explanations',true);
+    lv.concepts.forEach(function(c){
+      var d=el('div','lec-con');d.appendChild(en('h5','lec-ct',c.h));d.appendChild(en('p','',c.en));d.appendChild(el('p','lec-tr','По-русски: '+c.ru));sec.b.appendChild(d);
+    });
+    wrap.appendChild(sec.d);
+
+    sec=section('3. Лексика / Vocabulary ('+lv.vocab.length+')',false);
+    var vm=el('p','lec-sp-msg');vm.setAttribute('role','status');vm.setAttribute('aria-live','polite');
+    if(!tts)vm.textContent=TTS_NONE;
+    sec.b.appendChild(vm);
+    var vg=el('div','lec-vg');
+    lv.vocab.forEach(function(v){
+      var c=el('div','lec-v');
+      var hd=el('div','lec-vh');hd.appendChild(en('b','',v.t));hd.appendChild(el('span','lec-tr',' — '+v.ru));c.appendChild(hd);
+      c.appendChild(en('p','lec-def','Definition: '+v.def));
+      c.appendChild(en('p','lec-ex','Example: '+v.ex));
+      c.appendChild(speakBtn(v.t+'. '+v.ex,vm,v.t));
+      vg.appendChild(c);
+    });
+    sec.b.appendChild(vg);wrap.appendChild(sec.d);
+
+    sec=section('4. Тексты и упражнения / Reading and practice',false);
+    sec.b.appendChild(el('p','lec-tr','Упражнения здесь тренировочные: ответ проверяется сразу, баллы не записываются.'));
+    lv.texts.forEach(function(tx,ti){
+      var box=el('div','lec-text');
+      box.appendChild(en('h5','lec-ct',tx.title));
+      var q=el('blockquote','lec-quote');tx.body.forEach(function(p){q.appendChild(en('p','',p))});box.appendChild(q);
+      if(tx.note)box.appendChild(el('p','lec-note',tx.note));
+      tx.qs.forEach(function(qq,qi){
+        var fb=el('p','lec-fb');fb.setAttribute('role','status');fb.setAttribute('aria-live','polite');
+        var rq=radioQ(qq,qi,'lec-p'+lv.id+'-'+ti+'-'+qi,function(k){
+          fb.className='lec-fb '+(k===qq.a?'ok':'no');
+          fb.textContent=(k===qq.a?'✓ Верно. ':'✗ Неверно. Правильный ответ: '+qq.o[qq.a]+'. ')+qq.why;
+        });
+        box.appendChild(rq.fs);box.appendChild(fb);
+      });
+      sec.b.appendChild(box);
+    });
+    wrap.appendChild(sec.d);
+
+    sec=section('5. Устная практика / Speaking practice',false);
+    var sm=el('p','lec-sp-msg');sm.setAttribute('role','status');sm.setAttribute('aria-live','polite');
+    sm.textContent=tts?'':TTS_NONE;
+    sec.b.appendChild(el('p','lec-note','Нажмите «Прослушать», затем повторите фразу вслух. Используется встроенное озвучивание браузера. Сайт не записывает голос и не оценивает произношение.'));
+    sec.b.appendChild(sm);
+    sec.b.appendChild(el('h5','lec-ct','Repeat aloud / Повторите вслух'));
+    var pl=el('ul','lec-phr');
+    lv.speak.phrases.forEach(function(p){
+      var li=el('li');li.appendChild(en('span','lec-en',p.en));li.appendChild(el('span','lec-tr',p.ru));li.appendChild(speakBtn(p.en,sm));pl.appendChild(li);
+    });
+    sec.b.appendChild(pl);
+    sec.b.appendChild(en('h5','lec-ct',lv.speak.dialogue.title));
+    var dl=el('ul','lec-phr');
+    lv.speak.dialogue.lines.forEach(function(l){
+      var li=el('li');var sp=en('span','lec-en');sp.appendChild(el('b','',l.who+': '));sp.appendChild(document.createTextNode(l.en));
+      li.appendChild(sp);li.appendChild(speakBtn(l.en,sm));dl.appendChild(li);
+    });
+    sec.b.appendChild(dl);
+    var allBtn=el('button','lec-sp','🔊 Прослушать весь диалог');allBtn.type='button';
+    if(!tts)allBtn.disabled=true;else allBtn.onclick=function(){say(lv.speak.dialogue.lines.map(function(l){return l.en}),sm)};
+    sec.b.appendChild(allBtn);
+    sec.b.appendChild(el('h5','lec-ct','Oral response prompts / Ответьте вслух'));
+    lv.speak.prompts.forEach(function(p){
+      var d=el('details','lec-pr');var su=en('summary','',p.q);d.appendChild(su);
+      var inner=el('div','lec-body');inner.appendChild(el('p','lec-note','Подумайте и ответьте вслух. Затем сравните с образцом.'));
+      inner.appendChild(en('p','lec-model','Model answer: '+p.model));inner.appendChild(speakBtn(p.model,sm));d.appendChild(inner);sec.b.appendChild(d);
+    });
+    wrap.appendChild(sec.d);
+
+    var tb=el('div','lec-card lec-start');
+    tb.appendChild(el('h5','lec-lt','6. Итоговый тест / Final assessment'));
+    tb.appendChild(el('p','','Вопросов: '+lv.test.length+'. Проходной результат: '+PASS+'% (не меньше '+Math.ceil(lv.test.length*PASS/100)+' из '+lv.test.length+').'));
+    tb.appendChild(btn('Начать итоговый тест','main',function(){if(unlocked(i))go('test',i)}));
+    wrap.appendChild(tb);
+    return {node:wrap,focus:h};
+  }
+
+  function viewTest(){
+    var lv=LV[view.idx];
+    var wrap=el('div');
+    wrap.appendChild(btn('← К материалам уровня',null,function(){go('level',view.idx)}));
+    var h=el('h4','lec-h');h.tabIndex=-1;h.appendChild(document.createTextNode('Level '+lv.id+': итоговый тест'));wrap.appendChild(h);
+    wrap.appendChild(el('p','','Выберите один ответ в каждом вопросе. Проходной результат: '+PASS+'% (не меньше '+Math.ceil(lv.test.length*PASS/100)+' из '+lv.test.length+'). Подсказки и ответы после проверки вы увидите вместе с результатом.'));
+    var form=el('form','lec-form');form.setAttribute('novalidate','');
+    var legs=[];
+    lv.test.forEach(function(q,qi){var rq=radioQ(q,qi,'lec-t'+lv.id+'-'+qi);legs.push(rq);form.appendChild(rq.fs)});
+    var msg=el('p','lec-warn');msg.setAttribute('role','alert');msg.hidden=true;form.appendChild(msg);
+    var sb=btn('Проверить ответы','main');sb.type='submit';form.appendChild(sb);
+    form.addEventListener('submit',function(ev){
+      ev.preventDefault();
+      if(!unlocked(view.idx))return;
+      var ans=[],first=-1,miss=0;
+      lv.test.forEach(function(q,qi){
+        var c=form.querySelector('input[name="lec-t'+lv.id+'-'+qi+'"]:checked');
+        if(c){ans.push(parseInt(c.value,10))}else{ans.push(-1);miss++;if(first<0)first=qi}
+      });
+      if(miss){msg.hidden=false;msg.textContent='Ответьте на все вопросы. Без ответа: '+miss+'.';legs[first].lg.focus();return}
+      var score=0;lv.test.forEach(function(q,qi){if(ans[qi]===q.a)score++});
+      var e=has(st.levels,lv.id)?st.levels[lv.id]:{best:0,total:lv.test.length,attempts:0,last:0};
+      e.attempts++;e.last=score;e.best=Math.max(e.best,score);e.total=lv.test.length;
+      st.levels[lv.id]=e;save();
+      view.result={score:score,total:lv.test.length,ans:ans,ok:isPass(score,lv.test.length)};
+      go('result',view.idx);
+    });
+    wrap.appendChild(form);
+    return {node:wrap,focus:h};
+  }
+
+  function viewResult(){
+    var lv=LV[view.idx],r=view.result;
+    var wrap=el('div');
+    var h=el('h4','lec-h');h.tabIndex=-1;h.appendChild(document.createTextNode('Level '+lv.id+': результат'));wrap.appendChild(h);
+    var box=el('div','lec-card lec-score '+(r.ok?'is-done':'is-fail'));
+    box.appendChild(el('p','lec-big','Результат: '+r.score+' из '+r.total+' баллов ('+pct(r.score,r.total)+'%)'));
+    box.appendChild(el('p','lec-verdict',r.ok?'✓ Тест пройден: уровень '+lv.id+' завершён.':'✗ Тест не пройден: нужно не менее '+PASS+'% (не меньше '+Math.ceil(r.total*PASS/100)+' из '+r.total+').'));
+    var next=LV[view.idx+1];
+    if(r.ok){
+      box.appendChild(el('p','',next?'Следующий шаг: уровень '+next.id+' открыт. Переходите к нему.':'Вы прошли все доступные уровни. Новые уровни появятся позже; пока их уроков и тестов нет.'));
+    }else{
+      box.appendChild(el('p','','Следующий шаг: прочитайте пояснения ниже, повторите материалы уровня и пройдите тест ещё раз. Следующий уровень остаётся закрытым.'));
+    }
+    var row=el('div','lec-row');
+    if(r.ok&&next)row.appendChild(btn('Перейти к уровню '+next.id,'main',function(){if(unlocked(view.idx+1))go('level',view.idx+1)}));
+    row.appendChild(btn('Пройти тест ещё раз',r.ok&&next?null:'main',function(){go('test',view.idx)}));
+    row.appendChild(btn('К материалам уровня',null,function(){go('level',view.idx)}));
+    row.appendChild(btn('Все уровни',null,function(){go('roadmap')}));
+    box.appendChild(row);wrap.appendChild(box);
+
+    wrap.appendChild(el('h5','lec-ct','Разбор ответов'));
+    var ol=el('ol','lec-rev');
+    lv.test.forEach(function(q,qi){
+      var good=r.ans[qi]===q.a;
+      var li=el('li','lec-r '+(good?'ok':'no'));
+      li.appendChild(en('p','lec-rq',q.q));
+      li.appendChild(el('p','lec-rm',good?'✓ Верно':'✗ Неверно'));
+      if(!good){var yp=el('p','');yp.appendChild(document.createTextNode('Ваш ответ: '));yp.appendChild(en('span','',q.o[r.ans[qi]]));li.appendChild(yp)}
+      var cp=el('p','');cp.appendChild(document.createTextNode('Правильный ответ: '));cp.appendChild(en('span','',q.o[q.a]));li.appendChild(cp);
+      li.appendChild(el('p','lec-why','Пояснение: '+q.why));
+      ol.appendChild(li);
+    });
+    wrap.appendChild(ol);
+    wrap.appendChild(el('p','lec-note','Учебная проверка, а не экзамен под наблюдением. Результат хранится только в этом браузере.'));
+    return {node:wrap,focus:h};
+  }
+
+  function render(focusFn){
+    root.textContent='';
+    var v=view.name==='level'?viewLevel():view.name==='test'?viewTest():view.name==='result'?viewResult():viewRoadmap();
+    var live=el('p','lec-live',statusMsg);live.setAttribute('role','status');live.setAttribute('aria-live','polite');
+    root.appendChild(live);root.appendChild(v.node);
+    if(userNav){
+      var f=null;try{f=focusFn?focusFn():null}catch(e){f=null}
+      (f||v.focus).focus();
+    }
+  }
+  render();
 })();
 </script>
 
