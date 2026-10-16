@@ -1271,7 +1271,7 @@ I will check the requirements of… — я проверю требования�
         <li>Не выдавайте непроверенные сведения за официальную юридическую консультацию. Условия приёма, сроки и гранты проверяйте на официальных сайтах.</li>
       </ul>
       <p class="note" style="margin:12px 0 0"><b>Ответы сообщества носят информационный характер</b> и не заменяют индивидуальную юридическую консультацию.</p>
-      <p class="note" style="margin:8px 0 0"><b>Сообщить о нарушении.</b> Откройте обсуждение на GitHub (ссылка «Открыть на GitHub» в карточке вопроса) и воспользуйтесь жалобой GitHub в меню сообщения «…». Администратор LAWSTART может скрыть сообщение или снять вопрос с публикации.</p>
+      <p class="note" style="margin:8px 0 0"><b>Сообщить о нарушении.</b> Откройте обсуждение на GitHub (ссылка «Обсудить на GitHub» в карточке вопроса) и воспользуйтесь жалобой GitHub в меню сообщения «…». Администратор LAWSTART может скрыть сообщение или снять вопрос с публикации.</p>
     </div>
   </section>
 
@@ -7051,19 +7051,19 @@ try{var c=JSON.parse(document.getElementById('kectil-config').textContent);var n
  var DATA_URL='data/qa.json', PAGE=10;
  var CATS=[
   {k:'all',l:'Все'},
-  {k:'adm',l:'Поступление на юридические специальности в Казахстане',gh:'Поступление в Казахстане'},
-  {k:'ba',l:'Бакалавриат и второе высшее образование',gh:'Бакалавриат и второе высшее'},
-  {k:'ma',l:'Магистратура и M078',gh:'Магистратура и M078'},
-  {k:'intl',l:'Международное право и зарубежные университеты',gh:'Международное право и зарубежье'},
-  {k:'fund',l:'Стипендии, гранты и финансирование',gh:'Стипендии, гранты, финансирование'},
-  {k:'moot',l:'Юридические конкурсы, moot courts и стажировки',gh:'Конкурсы, moot courts, стажировки'},
-  {k:'lang',l:'Legal English и Legal Kazakh',gh:'Legal English и Legal Kazakh'},
-  {k:'other',l:'Другое',gh:'Другое'}];
+  {k:'adm',l:'Поступление и юридическое образование в Казахстане',gh:['Поступление и юридическое образование в Казахстане','Поступление на юридические специальности в Казахстане','Поступление в Казахстане']},
+  {k:'ba',l:'Второе высшее образование',gh:['Второе высшее образование','Бакалавриат и второе высшее образование','Бакалавриат и второе высшее']},
+  {k:'ma',l:'Магистратура M078',gh:['Магистратура M078','Магистратура и M078']},
+  {k:'intl',l:'Международное право и зарубежные университеты',gh:['Международное право и зарубежные университеты','Международное право и зарубежье']},
+  {k:'fund',l:'Гранты и стипендии',gh:['Гранты и стипендии','Стипендии, гранты и финансирование','Стипендии, гранты, финансирование']},
+  {k:'moot',l:'Moot courts, конкурсы и стажировки',gh:['Moot courts, конкурсы и стажировки','Юридические конкурсы, moot courts и стажировки','Конкурсы, moot courts, стажировки']},
+  {k:'lang',l:'Legal English и Legal Kazakh',gh:['Legal English и Legal Kazakh']},
+  {k:'other',l:'Другие вопросы',gh:['Другие вопросы','Другое']}];
  var list=document.getElementById('qa-list'); if(!list) return;
  var qInp=document.getElementById('qa-q'),catBox=document.getElementById('qa-cats'),cnt=document.getElementById('qa-count'),more=document.getElementById('qa-more');
  var st={cat:'all',q:'',shown:PAGE,items:null,updated:null};
  function norm(x){return String(x||'').toLowerCase().replace(/ё/g,'е').replace(/\s+/g,' ').trim()}
- function catKey(name){var n=norm(name);for(var i=1;i<CATS.length;i++){if(norm(CATS[i].gh)===n||norm(CATS[i].l)===n)return CATS[i].k}return 'other'}
+ function catKey(name){var n=norm(name);for(var i=1;i<CATS.length;i++){if(norm(CATS[i].l)===n)return CATS[i].k;for(var j=0;j<CATS[i].gh.length;j++)if(norm(CATS[i].gh[j])===n)return CATS[i].k}return 'other'}
  function catLabel(k){for(var i=0;i<CATS.length;i++)if(CATS[i].k===k)return CATS[i].l;return 'Другое'}
  function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e}
  function fdate(iso){var d=new Date(iso);if(isNaN(d))return '';try{return d.toLocaleDateString('ru-RU',{day:'numeric',month:'long',year:'numeric'})}catch(e){return iso.slice(0,10)}}
@@ -7092,8 +7092,7 @@ try{var c=JSON.parse(document.getElementById('kectil-config').textContent);var n
   inn.appendChild(el('p','qa-txt',d.body||'(без текста)'));
   if(d.comments.length){var ol=el('ol','qa-ans');ol.setAttribute('aria-label','Ответы');d.comments.forEach(function(c){ol.appendChild(answerLi(c,false))});inn.appendChild(ol)}
   var u=safeUrl(d.url);if(u){var lk=el('div','qa-lnk');
-   var a1=el('a',null,'Ответить на GitHub');a1.href=u;a1.target='_blank';a1.rel='noopener noreferrer';lk.appendChild(a1);
-   var a2=el('a',null,'Открыть на GitHub');a2.href=u;a2.target='_blank';a2.rel='noopener noreferrer';lk.appendChild(a2);inn.appendChild(lk)}
+   var a1=el('a',null,'Обсудить на GitHub');a1.href=u;a1.target='_blank';a1.rel='noopener noreferrer';lk.appendChild(a1);inn.appendChild(lk)}
   det.appendChild(inn);return det}
  function setMsg(t){cnt.textContent=t}
  function render(){
@@ -7117,7 +7116,8 @@ try{var c=JSON.parse(document.getElementById('kectil-config').textContent);var n
  function valid(j){return j&&typeof j==='object'&&Array.isArray(j.discussions)}
  function load(){list.setAttribute('aria-busy','true');list.innerHTML='';list.appendChild(el('p','note','Загрузка вопросов…'));setMsg('');
   var done=false;
-  fetch(DATA_URL,{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Error('http '+r.status);return r.json()}).then(function(j){
+  var ctl=(typeof AbortController!=='undefined')?new AbortController():null,tm=setTimeout(function(){if(ctl)ctl.abort()},15000);
+  fetch(DATA_URL,ctl?{cache:'no-cache',signal:ctl.signal}:{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Error('http '+r.status);return r.json()}).then(function(j){
    if(!valid(j))throw new Error('format');
    st.updated=j.updated||null;
    st.items=j.discussions.filter(function(d){return d&&typeof d.title==='string'&&d.title}).map(function(d){
@@ -7126,7 +7126,7 @@ try{var c=JSON.parse(document.getElementById('kectil-config').textContent);var n
       replies:(Array.isArray(c.replies)?c.replies:[]).filter(function(r){return r&&typeof r.body==='string'&&r.body}).map(function(r){return {author:String(r.author||'ghost'),staff:!!r.staff,createdAt:r.createdAt,body:r.body}})}})};
     o._k=catKey(d.category);
     o._n=norm(o.title+' '+o.body+' '+o.comments.map(function(c){return c.body+' '+c.replies.map(function(r){return r.body}).join(' ')}).join(' '));return o});
-   render()}).catch(function(){st.items=null;fail()})}
+   clearTimeout(tm);render()}).catch(function(){clearTimeout(tm);st.items=null;fail()})}
  window.lawstartQA={reload:load};
  load();
 })();
